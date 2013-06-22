@@ -379,7 +379,7 @@ table {
 /* END NORMALIZE */
 
 body {
-  background: #d4d4d4 url("../images/background.png");
+  background: #d4d4d4 url("/img/background.png");
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }

@@ -1,0 +1,146 @@
+@import url(http://fonts.googleapis.com/css?family=Sanchez);
+@import url(http://fonts.googleapis.com/css?family=ABeeZee:400,400italic);
+
+* {
+	font-family: 'ABeeZee';
+}
+
+h1, h2, h3 {
+	font-family: 'Sanchez';
+}
+
+body {
+	margin: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+img.left {
+	float: left;
+	margin-right: 24px;
+}
+
+img.right {
+	float: right;
+	margin-left: 24px;
+}
+
+p.right {
+	text-align: right;
+}
+
+#navbar {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 9001;
+	margin: 0;
+	padding: 0;
+
+	background: #9c1c1c;
+
+	text-align: center;
+	list-style-type: none;
+}
+
+#navbar li {
+	display: inline-block;
+}
+
+#navbar li:hover {
+	background: #c84545;
+}
+
+#navbar li a {
+	display: inline-block;
+	padding: 8px 12px;
+
+	color: rgba(255,255,255,0.8);
+
+	font-family: 'Sanchez';
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.category {
+	padding: 24px 24px 48px 24px;
+}
+
+.category.odd {
+	background: #eee;
+	color: #666;
+}
+
+.category.even {
+	background: #999;
+	color: #eee;
+}
+
+.category_header {
+	margin-bottom: 16px;
+
+	font-size: 32px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.category_creator {
+	margin-bottom: 16px;
+
+	font-size: 14px;
+	text-align: center;
+}
+
+.category_intro {
+	width: 93%;
+	max-width: 800px;
+	margin: 0 auto;
+
+	font-size: 16px;
+	font-style: italic;
+	text-align: center;
+
+	line-height: 24px;
+}
+
+.price_wrapper {
+	font-size: 22px;
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+#footer {
+	position: relative;
+	width: 100%;
+
+	padding: 24px 0;
+
+	background: #c84545;
+	color: #f4dada;
+
+	font-size: 24px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#footer a {
+	color: #fff;
+}
+
+#credit {
+	width: 100%;
+	padding: 12px 0;
+
+	background: #eee;
+	color: #666;
+
+	font-size: 12px;
+	text-align: center;
+}
+
+#credit a {
+	color: #999;
+}

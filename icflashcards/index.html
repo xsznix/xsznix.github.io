@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Integrated Chinese Vocabulary</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="index.css">
+		<script src="/javascripts/all.js"></script>
+		<script src="jquery.min.js"></script>
+		<script src="constants.js"></script>
+		<script src="csv.js"></script>
+		<script src="progress.js"></script>
+		<script src="icvocab.js"></script>
+		<script src="flashcard.js"></script>
+		<script src="overview.js"></script>
+	</head>
+	<body>
+		<h1 id="title">Integrated Chinese Vocabulary</h1>
+		<p id="subtitle">by <a href="/">xsznix</a></p>
+		<span id="loading">Loading...</span>
+
+		<div id="mainmenu" style="display:none">
+		</div>
+
+		<div id="back" style="display:none">
+			<button onclick="showMain()">&lt;&lt; Back</button>
+		</div>
+
+		<div id="flashcards" style="display:none">
+			<h2 id="f_head">Flashcards</h2>
+			<p id="f_sub">Edition X, Level X, Lesson X</p>
+			<div id="card">
+				<div id="f_vocab"></div>
+				<div id="f_reveal_wrap">
+					<button id="f_reveal" onclick="f_reveal()">Reveal</button>
+				</div>
+				<span id="f_hidden">
+					<div id="f_info">
+						<div id="f_yin">nihao</div>
+						<div id="f_def">Hello</div>
+					</div>
+					<hr>
+					<div id="f_choice">
+						How did you do?
+						<button id="f_good" onclick="f_handle(1)">Good.</button>
+						<button id="f_meh"  onclick="f_handle(0)">Meh.</button>
+						<button id="f_bad"  onclick="f_handle(-1)">Bad.</button>
+					</div>
+					<div id="f_prog" class="progress center">
+						<div id="f_progInner" class="progInner">&nbsp;</div>
+					</div>
+				</span>
+			</div>
+		</div>
+
+		<div id="overview" style="display:none">
+			<h2 id="o_head">Overview</h2>
+			<h3 id="o_lesson">Overall lesson mastery: <span id="o_lMastery">%</span></h3>
+			<button id="o_reset" onclick="o_resetMastery()">Reset Lesson Statistics</button>
+			<button id="o_random" onclick="o_randomiseMastery()">Randomise Lesson Statistics</button>
+			<h3>Vocabulary:</h3>
+			<p id="o_ordering">Order:
+        <input type="radio" name="o_ord" value="can" onchange="refreshOverview()" checked="true"><span>Canonical</span>
+        <input type="radio" name="o_ord" value="asc" onchange="refreshOverview()"><span>Ascending</span>
+        <input type="radio" name="o_ord" value="dsc" onchange="refreshOverview()"><span>Descending</span></p>
+      <div id="o_tblhead"><span style="float:left">Word</span><span style="float:right">Mastery</span></div>
+      <div style="height:8px">&nbsp;</div>
+			<ul id="o_content"></ul>
+		</div>
+
+		<div id="footer">
+			<p>Vocabulary lists obtained from <a href="http://www.bruguier.com/integrated_chinese.html">Tony Bruguier</a>.</p>
+			<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+		</div>
+
+	</body>
+</html>

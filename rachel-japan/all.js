@@ -1,9 +1,8 @@
 $(function() {
 	var win = $(window);
 	var navbar = $('#navbar');
-	var navbar_prev = navbar.prev();
 	var navbar_next = navbar.next();
-	var navbar_position = navbar_prev.position().top + navbar_prev.outerHeight(true);
+	var navbar_position = navbar_next.position().top;
 	var fix_navbar = true;
 
 	var determine_if_fix_navbar = function () {
@@ -15,6 +14,8 @@ $(function() {
 			navbar.css({position: 'absolute', top: navbar_position + 'px'});
 			return;
 		}
+
+		navbar_position = navbar_next.position().top;
 
 		var s = win.scrollTop();
 		if (s >= navbar_position)
@@ -28,7 +29,7 @@ $(function() {
 		navbar_next.css('margin-top', offset + 'px');
 
 		determine_if_fix_navbar();
-		navbar_position = navbar_prev.position().top + navbar_prev.outerHeight(true);
+		navbar_position = navbar_next.position().top;
 		do_scroll();
 	}
 

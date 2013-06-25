@@ -3,7 +3,7 @@ http://humanstxt.org/
 /* TEAM */
 
 	Lead Designer/Developer: Xuming Zeng
-	Site: https://xsznix.github.io/
+	Site: https://xsznix.herokuapp.com/
 	Location: Austin, Texas
 
 /* THANKS */

@@ -39,18 +39,21 @@
 .variant_desc {
 	position: absolute;
 	z-index: 1;
-	top: 0;
-	width: 152px;
-	height: 102px;
-	padding: 24px;
+	bottom: 4px;
+	width: 100%;
+	padding: 4px 0;
 
 	opacity: 0;
+	background: #fff;
 	background: rgba(255,255,255,0.8);
 
 	transition: opacity 0.2s;
+
+	text-align: center;
 }
 
 .category.even .variant_desc {
+	background: #444;
 	background: rgba(64,64,64,0.8);
 }
 
@@ -60,7 +63,7 @@
 	overflow: hidden;
 }
 
-.variant_desc:hover {
+.variant_image:hover + .variant_desc {
 	opacity: 1;
 }
 

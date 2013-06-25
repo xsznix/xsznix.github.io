@@ -1,0 +1,673 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"load",
+				"load_aisd_session"
+			],
+			[
+				"A",
+				"AssignmentPointsPossible"
+			],
+			[
+				"lam",
+				"loan_amount"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 11865,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "headbands.html",
+			"settings":
+			{
+				"buffer_size": 5039,
+				"line_ending": "Unix",
+				"name": "<!DOCTYPE html>"
+			}
+		},
+		{
+			"file": "all.js",
+			"settings":
+			{
+				"buffer_size": 927,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "humans.txt",
+			"settings":
+			{
+				"buffer_size": 830,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "all.css",
+			"settings":
+			{
+				"buffer_size": 1743,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.css",
+			"settings":
+			{
+				"buffer_size": 1131,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "items.css",
+			"settings":
+			{
+				"buffer_size": 1155,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "items.js",
+			"settings":
+			{
+				"buffer_size": 488,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/liquid-slider.css",
+			"settings":
+			{
+				"buffer_size": 11906,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 318.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Discover Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 119.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/xsznix/Web/rachel-japan/humans.txt",
+		"/Users/xsznix/Web/rachel-japan/index.js",
+		"/Users/xsznix/Web/rachel-japan/all.js",
+		"/Volumes/Ramdisk/liquidslider-master/demo.html",
+		"/Users/xsznix/Web/rachel-japan/skrollr.stylesheets.min.js",
+		"/Users/xsznix/Web/rachel-japan/skrollr.min.js",
+		"/Users/xsznix/Web/rachel-japan/jquery-1.10.1.min.js",
+		"/Users/xsznix/Documents/Freelancing/spreadsheetparser/spec/nycb_spec.rb",
+		"/Users/xsznix/Documents/Freelancing/spreadsheetparser/spec/flagstar_spec.rb",
+		"/Users/xsznix/Documents/Freelancing/spreadsheetparser/lib/spreadsheetparser/adjustments/nycb.csv",
+		"/Users/xsznix/Documents/Freelancing/Austin-First-Mortgage/Gemfile",
+		"/Users/xsznix/Documents/Freelancing/Austin-First-Mortgage/afm.sublime-workspace",
+		"/Users/xsznix/Documents/Freelancing/Austin-First-Mortgage/afm.sublime-project",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/public/all.css",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/public/choose.css",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/public/rules.css",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/views/rules.erb",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/juniors.csv",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/models/pair.rb",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/views/footer.erb",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/public/index.css",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/views/success.erb",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/views/error.erb",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/views/download.erb",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/views/index.erb",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/views/choose.erb",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/models/senior.rb",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/models/init.rb",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/seniors.csv",
+		"/Volumes/Ramdisk/seniors.csv",
+		"/Volumes/Ramdisk/juniors.csv",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/app.rb",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/views/old/download.erb",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/public/error.css",
+		"/Users/xsznix/Documents/Schedule Comparinator 2012/schedcmp2012/models/init.rb",
+		"/Users/xsznix/Documents/Heroku/IB-Siblings-Chooser/views/form.erb",
+		"/Users/xsznix/Web/siblings-prototype",
+		"/Users/xsznix/Documents/HACker/manifest.json",
+		"/Users/xsznix/Documents/HACker/CHANGELOG.md",
+		"/Users/xsznix/Documents/HACker/options.html",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/Misc/grades.txt",
+		"/Users/xsznix/Documents/HACker/README.md",
+		"/Users/xsznix/Documents/HACker/remote.js",
+		"/Users/xsznix/Documents/HACker/hac.js",
+		"/Users/xsznix/Documents/HACker/hac_dom.js",
+		"/Users/xsznix/Documents/HACker/base64.js",
+		"/Users/xsznix/Documents/HACker/background.js",
+		"/Users/xsznix/Documents/HACker/options.js",
+		"/Users/xsznix/Documents/HACker/hac.css",
+		"/Users/xsznix/Documents/HACker/options.css",
+		"/Users/xsznix/Documents/HACker/options_formdata.js",
+		"/Users/xsznix/Documents/HACker/options_create.js",
+		"/Users/xsznix/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/xsznix/bin/cloc.pl",
+		"/Users/xsznix/Documents/HACker/assets/logo.svg",
+		"/Users/xsznix/Documents/HACker/lib/pixastic.custom.js",
+		"/Users/xsznix/Documents/HACker/background.html",
+		"/Users/xsznix/Documents/hacaccess/app.rb",
+		"/Users/xsznix/Documents/HACker/hac.html",
+		"/Users/xsznix/Documents/HACker/OVERVIEW.txt",
+		"/Users/xsznix/Documents/HACker/pixastic.custom.js",
+		"/Users/xsznix/Documents/hacaccess/views/latex_ee.erb",
+		"/Users/xsznix/Documents/hacaccess/views/qhac_ml_fix.erb",
+		"/Users/xsznix/Documents/HACker/jquery.tipsy.js",
+		"/Users/xsznix/Documents/hacaccess/views/sailesh.erb",
+		"/Users/xsznix/Documents/HACker/tipsy.css",
+		"/Users/xsznix/Documents/hacaccess/views/qhac.erb",
+		"/Users/xsznix/Documents/hacaccess/hacscript.rb",
+		"/Users/xsznix/Documents/hacaccess/public/update.xml",
+		"/Users/xsznix/Documents/HACker/moment.js",
+		"/Users/xsznix/Documents/HACker/common.js",
+		"/Users/xsznix/Documents/hacaccess/views/mhac.erb",
+		"/Users/xsznix/Documents/hacaccess/public/common.css",
+		"/Users/xsznix/Documents/hacaccess/public/vote-inner.html",
+		"/Users/xsznix/Dropbox/Public/tumblr/theme.html",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/06 English/Poisonwood Bible/rm_whitespace.pl",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/06 English/Poisonwood Bible/bible_final.tex",
+		"/Applications/eclipse/Eclipse.app/Contents/MacOS/eclipse.ini",
+		"/Users/xsznix/Documents/workspace/Megaman Multiplayer/stages/Battlefield.bin.dat",
+		"/Volumes/Ramdisk/index.html",
+		"/Users/xsznix/Documents/workspace/Megaman Multiplayer/stages/dat_to_bin.pl",
+		"/Volumes/YES NAME/stages/Battlefield.dat",
+		"/Volumes/YES NAME/stages/Final Destination.dat",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/class hierarchy.java",
+		"/Users/xsznix/bin/minecraft",
+		"/Users/xsznix/Dropbox/Public/tumblr/tumblr-awsum-layered-bg.css",
+		"/Users/xsznix/Documents/hacaccess/views/index.erb",
+		"/Users/xsznix/Documents/hacaccess/Gemfile",
+		"/Users/xsznix/Documents/Freelancing/Austin-First-Mortgage/app.rb",
+		"/Users/xsznix/Documents/hacaccess/views/update.xml",
+		"/Users/xsznix/Documents/HACker/StyleSheets/PCMaster.css",
+		"/Users/xsznix/Documents/HACker/example.html",
+		"/Users/xsznix/Documents/Freelancing/Austin-First-Mortgage/routes/main.rb",
+		"/Users/xsznix/Documents/workspace/HAC_getID/src/HACker.java",
+		"/Users/xsznix/Documents/HACker/jq.js",
+		"/Users/xsznix/Documents/hacmobile/hacscript.rb",
+		"/Users/xsznix/Documents/hacmobile/url_construct.rb",
+		"/Users/xsznix/Documents/hacmobile/views/home.erb",
+		"/Users/xsznix/Documents/hacmobile/Gemfile",
+		"/Users/xsznix/Music/Releases/Original Songs 2012/README",
+		"/Users/xsznix/bin/SwitchJRE",
+		"/Users/xsznix/bin/SwitchJRE.sh",
+		"/Users/xsznix/Dropbox/lolnurd/pascal/pascal.c",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/Unit 2 - LC3/Calculator/ccalc.asm",
+		"/Users/xsznix/Library/KeyBindings/DefaultKeyBinding.dict",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/Unit 2 - LC3/Calculator/Calculator.asm",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/Unit 2 - LC3/echo/echo.sym",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/Unit 2 - LC3/HelloWorld4/HelloWorld4.asm",
+		"/Users/xsznix/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/Unit 2 - LC3/HelloWorld3/HelloWorld3.asm",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/Unit 2 - LC3/HelloWorld4/HelloWorld4.lst",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/Unit 2 - LC3/hello.c",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/Unit 2 - LC3/echo_c.c",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/Unit 2 - LC3/echo-c.asm",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/Unit 2 - LC3/echo-c.c",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/Unit 2 - LC3/hello.asm",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/Unit 2 - LC3/HelloWorld2/HelloWorld2.asm",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/Unit 2 - LC3/HelloWorld1/HelloWorld1.asm",
+		"/Users/xsznix/Google Drive/2012-13 Westwood/03 Compsci/hello_world.asm",
+		"/Users/xsznix/Desktop/.DS_Store",
+		"/Users/xsznix/Documents/Freelancing/Austin-First-Mortgage/models/offer.rb",
+		"/Users/xsznix/bin/lc3tools/lcc-1.3/cpp/unix.c",
+		"/Applications/Logisim.app/Contents/Info.plist",
+		"/Users/xsznix/Documents/Freelancing/Austin-First-Mortgage/models/form.rb",
+		"/Users/xsznix/Documents/Freelancing/Austin-First-Mortgage/ifw_writer.rb",
+		"/Users/xsznix/Documents/Freelancing/Austin-First-Mortgage/models/loan.rb",
+		"/Users/xsznix/Documents/Freelancing/Austin-First-Mortgage/scripts/quote.coffee",
+		"/Users/xsznix/Documents/Freelancing/Austin-First-Mortgage/ifw.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"navbar_prev",
+			"navbar_offsetter",
+			",",
+			" ",
+			"senior_name",
+			"senior2_name",
+			"senior1_name",
+			"empty",
+			"nil",
+			"all_juniors",
+			"exc",
+			"data",
+			"data(\"weight\"",
+			"data(\"weight\")",
+			"size",
+			"load_session",
+			"load_aisd_session",
+			"setInterval",
+			"spinWrapper",
+			"isLoading",
+			"HAC",
+			"cells",
+			"ask",
+			"Country",
+			"		#",
+			"myObj",
+			"grades",
+			"_notify",
+			"34",
+			"to_js_obj",
+			"login",
+			"());\n",
+			"lender",
+			"lender cr",
+			"sub",
+			"\n}",
+			"add",
+			"\n		<h2>Constipation 101</h2>\n		<ul class=\"studentlist\">\n			<li>Yash Aggarwal</li>\n			<li>Justin Lai</li>\n			<li>Max Ciotti</li>\n			<li>Simon Zeng</li>\n		</ul>\n		<hr>",
+			";\n",
+			"token",
+			"get_user",
+			"s",
+			"loan_amount"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			" ",
+			","
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 11865,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								832,
+								832
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "headbands.html",
+					"settings":
+					{
+						"buffer_size": 5039,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4848,
+								4848
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<!DOCTYPE html>",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1107.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "all.js",
+					"settings":
+					{
+						"buffer_size": 927,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								441,
+								441
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "humans.txt",
+					"settings":
+					{
+						"buffer_size": 830,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21,
+								21
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "all.css",
+					"settings":
+					{
+						"buffer_size": 1743,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								714,
+								714
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "index.css",
+					"settings":
+					{
+						"buffer_size": 1131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								352,
+								352
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "items.css",
+					"settings":
+					{
+						"buffer_size": 1155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								569,
+								569
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 153.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "items.js",
+					"settings":
+					{
+						"buffer_size": 488,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								482,
+								482
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "lib/liquid-slider.css",
+					"settings":
+					{
+						"buffer_size": 11906,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2184,
+								2184
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5891.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"check",
+				"views/part/form/checkbox.haml"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 181.0,
+	"status_bar_visible": true
+}

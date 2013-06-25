@@ -19,6 +19,10 @@
 	margin-bottom: 36px;
 }
 
+.category_intro h3 {
+	font-style: normal;
+}
+
 .slider_header {
 	margin: 48px 0 16px 0;
 	text-align: center;
@@ -41,14 +45,31 @@
 	margin: 0 auto;
 }
 
+.variant_list > div {
+	float: left;
+	width: 50%;
+	text-align: center;
+	margin-bottom: 36px;
+
+	background: #999;
+}
+
 .variant_img {
+	display: inline-block;
 	width: 93%;
 	max-width: 400px;
-	margin-bottom: 24px;
+	margin: 24px 0 24px 0;
 }
 
 .variant_img.small {
 	max-width: 250px;
+}
+
+.variant_caption {
+	margin-top: -12px;
+
+	font-weight: bold;
+	color: #eee;
 }
 
 h2.title {
@@ -81,7 +102,7 @@ h2.title {
 	.variant_img {
 		float: none !important;
 		display: block !important;
-		margin: 0 auto 24px auto !important;
+		margin: 24px auto 24px auto !important;
 	}
 
 	.liquid-slider {

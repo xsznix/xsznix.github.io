@@ -28,3 +28,9 @@ http://humanstxt.org/
 
 		knobRot
 		https://github.com/AlexanderParker/knobRot
+
+		adapted code from Matt Diamond's SynthJS
+		https://github.com/mattdiamond/synthjs
+
+		adapted code from Nick Thompson's Web Audio Components
+		https://github.com/web-audio-components/pink-noise

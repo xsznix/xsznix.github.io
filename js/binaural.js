@@ -46,7 +46,7 @@ function Binaural() {
     }
 
     this.setBgGain = function (g) {
-        this.gain = g;
+        this.bgGain = g;
         this.bgGainNode.gain.value = g;
     }
 

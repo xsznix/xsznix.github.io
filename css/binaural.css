@@ -45,6 +45,14 @@
 	margin-bottom: 6px;
 }
 
+#noisecontrol input {
+	margin-left: 6px;
+}
+
+#noisecontrol label {
+	margin-right: 6px;
+}
+
 #help {
 	text-align: justify;
 }

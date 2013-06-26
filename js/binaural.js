@@ -63,13 +63,14 @@ function Binaural() {
     }
 
     this.mute = function (m) {
+        var now = this.ctx.currentTime;
         this.muted = m;
         if (m) {
-            this.gainNode.gain.value = 0;
-            this.bgGainNode.gain.value = 0;
+            this.gainNode.gain.linearRampToValueAtTime(0, now + 1);
+            this.bgGainNode.gain.linearRampToValueAtTime(0, now + 1);
         } else {
-            this.gainNode.gain.value = this.gain;
-            this.bgGainNode.gain.value = this.bgGain;
+            this.gainNode.gain.linearRampToValueAtTime(this.gain, now + 5);
+            this.bgGainNode.gain.linearRampToValueAtTime(this.bgGain, now + 5);
         }
     }
 
@@ -85,7 +86,8 @@ function Binaural() {
     }
 
     this.start = function () {
-        this.osc1.start(0);
-        this.osc2.start(0);
+        var now = this.ctx.currentTime;
+        this.osc1.noteOn(0);
+        this.osc2.noteOn(0);
     }
 }

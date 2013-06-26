@@ -9,6 +9,7 @@ http://humanstxt.org/
 
 	Last updated: 2013/06/26
 	Standards: HTML5, CSS3, WebAudio API
+	Browser support: latest Chrome, latest Safari
 	Language: English (US)
 	IDE: Sublime Text
 	Hosting: GitHub

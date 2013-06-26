@@ -1,5 +1,12 @@
+#controls * {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 #controls {
-	width: 400px;
+	width: 450px;
 	margin: 0 auto;
 	padding: 24px;
 	border-radius: 8px;
@@ -32,6 +39,10 @@
 
 #muter {
 	margin-top: 24px;
+}
+
+#controls h4 {
+	margin-bottom: 6px;
 }
 
 #help {

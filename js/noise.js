@@ -1,6 +1,4 @@
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
-
-(function() {
+(function(AudioContext) {
 
 	// adapted from https://github.com/mattdiamond/synthjs
 

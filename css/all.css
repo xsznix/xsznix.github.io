@@ -383,3 +383,20 @@ body {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
+
+#container {
+  margin: 96px auto 96px auto;
+  padding: 36px;
+  width: 600px;
+
+  border-radius: 12px;
+  box-shadow: 8px 8px 32px rgba(0,0,0,0.2);
+
+  background: #fff;
+  color: #444;
+}
+
+.humans {
+  color: #999;
+  font-size: 12px;
+}

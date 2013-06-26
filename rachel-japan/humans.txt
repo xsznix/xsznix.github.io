@@ -23,11 +23,11 @@ http://humanstxt.org/
 
 /* SITE */
 
-	Last updated: 2013/06/19
+	Last updated: 2013/06/24
 	Standards: HTML5, CSS3
 	Language: English (US)
 	IDE: Sublime Text
-	Hosting: Heroku
+	Hosting: GitHub
 
 	Components:
 

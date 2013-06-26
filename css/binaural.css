@@ -1,0 +1,50 @@
+#controls {
+	width: 400px;
+	margin: 0 auto;
+	padding: 24px;
+	border-radius: 8px;
+	background: url('/img/black-linen.png');
+	box-shadow: inset 4px 4px 16px #000;
+
+	color: #eee;
+	text-shadow: 0px 1px 0px #000;
+}
+
+#knobs {
+	text-align: center;
+}
+
+.knob-container {
+	display: inline-block;
+}
+
+.knob-values {
+	color: #eee;
+}
+
+#labels span {
+	display: inline-block;
+	width: 100px;
+
+	text-align: center;
+	font-weight: bold;
+}
+
+#muter {
+	margin-top: 24px;
+}
+
+#help {
+	text-align: justify;
+}
+
+.sub {
+	color: #666;
+	font-size: 12px;
+}
+
+#disclaimer {
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}

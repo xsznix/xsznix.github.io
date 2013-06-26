@@ -1,22 +1,14 @@
 http://humanstxt.org/
-Other humans.txt files can be found on the root subdirectory of each project hosted on this site.
 
 /* TEAM */
 
-	Lead Developer/Designer: Xuming Zeng
-	Location: Austin, Texas
-
-/* THANKS */
-
-	Design Advisor: Maxwell Ciotti
-	Site: http://www.lusolis.net/
-	GitHub: https://github.com/mdciotti
+	Developer: Xuming Zeng
 	Location: Austin, Texas
 
 /* SITE */
 
 	Last updated: 2013/06/25
-	Standards: HTML5, CSS3
+	Standards: HTML5, CSS3, WebAudio API
 	Language: English (US)
 	IDE: Sublime Text
 	Hosting: GitHub
@@ -33,3 +25,6 @@ Other humans.txt files can be found on the root subdirectory of each project hos
 		http://subtlepatterns.com/
 
 		Google Analytics
+
+		knobRot
+		https://github.com/AlexanderParker/knobRot

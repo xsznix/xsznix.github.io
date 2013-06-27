@@ -7,7 +7,7 @@ http://humanstxt.org/
 
 /* SITE */
 
-	Last updated: 2013/06/26
+	Last updated: 2013/06/27
 	Standards: HTML5, CSS3, WebAudio API
 	Browser support: latest Chrome, latest Safari
 	Language: English (US)
@@ -30,8 +30,11 @@ http://humanstxt.org/
 		knobRot
 		https://github.com/AlexanderParker/knobRot
 
-		adapted code from Matt Diamond's SynthJS
+		adapted code from SynthJS
 		https://github.com/mattdiamond/synthjs
 
-		adapted code from Nick Thompson's Web Audio Components
+		adapted code from Web Audio Components
 		https://github.com/web-audio-components/pink-noise
+
+		adapted code from www.source-code.biz
+		http://www.source-code.biz/snippets/java/BrownNoiseGenerator.java

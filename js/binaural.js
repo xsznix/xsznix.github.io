@@ -19,6 +19,9 @@ function Binaural() {
 
     this.whitenoise = this.ctx.createNoiseGen(true);
     this.pinknoise = this.ctx.createPinkNoiseFilter();
+    this.brownnoise = this.ctx.createBrownNoiseFilter();
+    this.violetnoise = this.ctx.createVioletNoiseFilter();
+    this.greynoise = this.ctx.createGreyNoiseFilter();
     this.bgGainNode = this.ctx.createGainNode();
 
     // hook everything up
@@ -76,11 +79,23 @@ function Binaural() {
     this.setNoiseType = function (n) {
         this.whitenoise.disconnect();
         this.pinknoise.disconnect();
+        this.brownnoise.disconnect();
+        this.violetnoise.disconnect();
+        this.greynoise[1].disconnect();
         if (n == "white") {
             this.whitenoise.connect(this.bgGainNode);
         } else if (n == "pink") {
             this.whitenoise.connect(this.pinknoise);
             this.pinknoise.connect(this.bgGainNode);
+        } else if (n == "brown") {
+            this.whitenoise.connect(this.brownnoise);
+            this.brownnoise.connect(this.bgGainNode);
+        } else if (n == "violet") {
+            this.whitenoise.connect(this.violetnoise);
+            this.violetnoise.connect(this.bgGainNode);
+        } else if (n == "grey") {
+            this.whitenoise.connect(this.greynoise[0]);
+            this.greynoise[1].connect(this.bgGainNode);
         }
     }
 

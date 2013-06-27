@@ -64,6 +64,8 @@
 			<div id="muter">
 				<input type="checkbox" id="mutebox" defaultChecked="false">
 				<label for="mutebox">Mute</label>
+				<input type="checkbox" id="dimbox" defaultChecked="false">
+				<label for="dimbox">Dim</label>
 			</div>
 		</div>
 
@@ -129,6 +131,8 @@
 
 	</div>
 
+	<div id="dim">&nbsp;</div>
+
 	<script type="text/javascript">
 	$(function() {
 		var bin = new Binaural();
@@ -163,7 +167,7 @@
 			});
 
 		knobs[3].knobRot($.extend(
-			{minimumValue: 0, maximumValue: 1, dragMultiplier: 0.01}, knobOptions))
+			{minimumValue: 0, maximumValue: 2, dragMultiplier: 0.01}, knobOptions))
 			.on('knobdrag', function() {
 				bin.setBgGain(parseFloat(knobs[3].val()) / 10);
 			});
@@ -173,10 +177,18 @@
 			bin.mute(mutebox.prop('checked'))
 		});
 
+		var dimbox = $("#dimbox");
+		dimbox.change(function() {
+			if (dimbox.prop('checked'))
+				$(document.body).addClass('dim');
+			else
+				$(document.body).removeClass('dim');
+		});
+
 		var noiseType = function() { return $("input[name=noise]:checked").val(); };
 		$("input[name=noise]").change(function() {
 			bin.setNoiseType(noiseType());
-		})
+		});
 
 		bin.start();
 	})

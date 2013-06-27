@@ -159,7 +159,7 @@
 		node3.gain.value = 8;
 
 		var node4 = context.createGainNode();
-		node4.gain.value = 20;
+		node4.gain.value = 30;
 
 		node1.connect(node2);
 		node2.connect(node3);

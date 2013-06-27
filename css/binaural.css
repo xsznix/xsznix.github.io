@@ -1,4 +1,34 @@
+#dim {
+	z-index: 9000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: url('/img/black-linen.png');
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	-webkit-transition: opacity 1.5s ease-in-out;
+}
+
+body.dim {
+	overflow: hidden;
+}
+
+body.dim #dim {
+	opacity: 1;
+}
+
+body.dim #controls {
+	top: 100px;
+}
+
 #controls * {
+	z-index: 9001;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -6,15 +36,23 @@
 }
 
 #controls {
+	z-index: 9001;
+	position: absolute;
+	top: 218px;
+	left: 50%;
+	right: 50%;
+	margin-left: -249px;
+	margin-right: -249px;
 	width: 450px;
-	margin: 0 auto;
 	padding: 24px;
 	border-radius: 8px;
-	background: url('/img/black-linen.png');
+	background: url('/img/carbon_fibre.png');
 	box-shadow: inset 4px 4px 16px #000;
 
 	color: #eee;
 	text-shadow: 0px 1px 0px #000;
+
+	-webkit-transition: top 1.5s ease-in-out;
 }
 
 #knobs {
@@ -37,24 +75,86 @@
 	font-weight: bold;
 }
 
+#controls h4 {
+	margin-bottom: 6px;
+	font-size: 12px;
+}
+
 #muter {
 	margin-top: 24px;
 }
 
-#controls h4 {
-	margin-bottom: 6px;
+[name=noise], #mutebox, #dimbox {
+	display: none;
 }
 
-#noisecontrol input {
-	margin-left: 6px;
+input + label {
+	padding: 4px 12px;
+	border-radius: 4px;
+
+	background: rgba(0, 0, 0, 0.2);
+	color: rgba(255, 255, 255, 0.6);
+	border: 2px groove #444;
+
+	font-size: 14px;
+	text-transform: uppercase;
+
+	-webkit-transition: all 80ms linear;
 }
 
-#noisecontrol label {
-	margin-right: 6px;
+[name=noise] + label {
+	font-size: 12px;
+}
+
+#whitenoise:checked + label {
+	background: #eee;
+	color: #444;
+	text-shadow: 0px 1px 0px #fff;
+}
+
+#pinknoise:checked + label {
+	background: #f88;
+	color: #fff;
+}
+
+#brownnoise:checked + label {
+	background: #842;
+	color: #fff;
+}
+
+#violetnoise:checked + label {
+	background: #338;
+	color: #fff;
+}
+
+#greynoise:checked + label {
+	background: #666;
+	color: #fff;
+}
+
+#mutebox + label {
+	background: #521;
+	color: #c88;
+}
+
+#mutebox:checked + label {
+	background: #c21;
+	color: #fff;
+}
+
+#dimbox + label {
+	background: #000;
+	color: #ccc;
+}
+
+#dimbox:checked + label {
+	background: #444;
+	color: #fff;
 }
 
 #help {
 	text-align: justify;
+	margin-top: 410px;
 }
 
 .sub {

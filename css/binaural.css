@@ -1,5 +1,5 @@
 #dim {
-	z-index: 9000;
+	z-index: 5;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -25,6 +25,10 @@ body.dim #dim {
 
 body.dim #controls {
 	top: 100px;
+}
+
+body.dim #help {
+	z-index: 0;
 }
 
 #controls * {
@@ -153,6 +157,8 @@ input + label {
 }
 
 #help {
+	z-index: 10;
+	position: relative;
 	text-align: justify;
 	margin-top: 410px;
 }

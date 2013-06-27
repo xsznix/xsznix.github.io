@@ -23,7 +23,6 @@
 		var node = context.createJavaScriptNode(bufSize, 2, 2);
 
 		node.onaudioprocess = function(e) {
-			// You will not BELIEVE how much hacking it took to get this to work.
 			var inBufferL = e.inputBuffer.getChannelData(0);
 			var inBufferR = e.inputBuffer.getChannelData(1);
 			var outBufferL = e.outputBuffer.getChannelData(0);

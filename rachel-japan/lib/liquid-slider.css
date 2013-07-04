@@ -208,14 +208,15 @@
   width:100%
   And delete the rest of the styling here */
 
-  width: 150%;
+  width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance:none;
   background: transparent;
   padding: 5px;
   font-size: 110%;
-  border: 1px solid #bbb;
+  border: 1px solid #999;
+  border-radius: 0;
   height: 35px;
   cursor:pointer;
 }

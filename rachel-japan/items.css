@@ -46,18 +46,22 @@
 }
 
 .variant_list > div {
-	float: left;
-	width: 50%;
+	width: 100%;
+	padding-bottom: 16px;
 	text-align: center;
-	margin-bottom: 36px;
 
 	background: #999;
+}
+
+.variant_list.vertical > div {
+	width: 50%;
+	float: left;
 }
 
 .variant_img {
 	display: inline-block;
 	width: 93%;
-	max-width: 400px;
+	max-width: 480px;
 	margin: 24px 0 24px 0;
 }
 
@@ -67,6 +71,7 @@
 
 .variant_caption {
 	margin-top: -12px;
+	margin-bottom: 0;
 
 	font-weight: bold;
 	color: #eee;
@@ -94,8 +99,38 @@ h2.title {
 	margin-left: 24px;
 }
 
+.liquid-slider.nodesc .variant_img {
+	width: 100%;
+	max-width: none;
+	margin-bottom: 0;
+}
+
+.liquid-slider.nodesc .title {
+	clear: both;
+	text-align: center;
+}
+
+.liquid-slider.nodesc p {
+	display: none;
+}
+
 .liquid-slider p {
 	line-height: 22px;
+}
+
+#fabric_slider .panel-wrapper {
+	padding: 0 !important;
+}
+
+#fabric_slider .variant_img {
+	display: block;
+	float: none;
+	max-width: 100%;
+	margin: 24px auto;
+}
+
+#fabric_slider .title {
+	text-align: center;
 }
 
 @media all and (max-width: 720px) {

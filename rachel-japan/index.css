@@ -26,6 +26,14 @@
 	line-height: 44px;
 }
 
+#bio a {
+	color: #fff;
+}
+
+#bio a:active {
+	color: #ddd;
+}
+
 .variant_wrapper {
 	text-align: center;
 }
@@ -52,6 +60,12 @@
 	text-align: center;
 }
 
+.variant_desc a {
+	font-family: inherit;
+	font-weight: bold;
+	color: inherit;
+}
+
 .category.even .variant_desc {
 	background: #444;
 	background: rgba(64,64,64,0.8);
@@ -59,12 +73,31 @@
 
 .variant_image {
 	width: 200px;
-	height: 150px;
+	height: 133px;
 	overflow: hidden;
 }
 
-.variant_image:hover + .variant_desc {
+.variant_image.vertical {
+	width: 133px;
+	height: 200px;
+}
+
+.variant_image:hover + .variant_desc, .variant_desc:hover {
 	opacity: 1;
+}
+
+#cat_wrapper {
+	padding: 24px 0 0 0;
+	margin-bottom: -4px;
+}
+
+#cat_wrapper .variant {
+	margin: 24px 0 0 0;
+}
+
+#rachels_cat {
+	width: 100%;
+	height: auto;
 }
 
 #content_spacer {

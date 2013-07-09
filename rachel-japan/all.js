@@ -25,7 +25,7 @@ $(function() {
 	}
 
 	var offset_navbar = function () {
-		var offset = navbar.height();
+		var offset = navbar.height() - 2;
 		navbar_next.css('margin-top', offset + 'px');
 
 		determine_if_fix_navbar();

@@ -1,37 +1,52 @@
-#bio_wrapper {
-	background: #c84545;
-	padding: 48px 0;
-
-	color: #f4dada;
-}
-
-#bio {
-	width: 93%;
-	max-width: 720px;
-	margin: 0 auto;
-
-	line-height: 150%;
-	text-align: justify;
-}
-
 #avatar {
 	width: 200px;
 	height: 300px;
-	margin: 0 32px 32px 0;
+	margin: 0 32px 0 0;
 	float: left;
 }
 
-#bio h1 {
-	font-size: 48px;
-	line-height: 44px;
+#bio_inner {
+	width: 93%;
+	max-width: 800px;
+	margin: 0 auto;
+
+	text-align: justify;
+}
+
+#bio h1 a {
+	font-family: 'Sanchez';
+	font-size: 36px;
+	color: inherit;
+}
+
+#bio h2 {
+	text-align: left;
+}
+
+#bio h3, #bio p.it {
+	font-style: italic;
+}
+
+#bio p {
+	font-size: 18px;
+	line-height: 26px;
 }
 
 #bio a {
-	color: #fff;
+	color: inherit;
 }
 
 #bio a:active {
-	color: #ddd;
+	color: #fff;
+}
+
+#scroll_reminder {
+	margin: 0 auto;
+
+	font-family: 'Sanchez';
+	font-size: 20px;
+	text-align: center;
+	color: rgba(255,255,255,0.5);
 }
 
 .variant_wrapper {
@@ -105,9 +120,14 @@
 }
 
 @media all and (max-width: 720px) {
-	#bio, .category_intro {
+	.category_intro {
 		width: auto;
 		margin: 0 24px;
+	}
+	#bio {
+		width: auto;
+		padding-left: 24px;
+		padding-right: 24px;
 	}
 }
 

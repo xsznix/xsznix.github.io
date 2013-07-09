@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Sanchez);
+@import url(http://fonts.googleapis.com/css?family=Sanchez:400,400italic);
 @import url(http://fonts.googleapis.com/css?family=ABeeZee:400,400italic);
 
 * {
@@ -11,6 +11,7 @@ h1, h2, h3 {
 
 body {
 	margin: 0;
+	background: #eee;
 }
 
 .clear {
@@ -29,6 +30,18 @@ img.right {
 
 p.right {
 	text-align: right;
+}
+
+#header {
+	margin: 0;
+	padding: 8px 0;
+	background: #ff8585;
+}
+
+#header h1 {
+	color: #ffe7e7;
+	font-size: 48px;
+	text-align: center;
 }
 
 #navbar {
@@ -50,7 +63,11 @@ p.right {
 }
 
 #navbar li:hover {
-	background: #c84545;
+	background: #ff8585;
+}
+
+#navbar li:hover a {
+	color: #ffe7e7;
 }
 
 #navbar li a {
@@ -77,6 +94,11 @@ p.right {
 .category.even {
 	background: #999;
 	color: #eee;
+}
+
+.category.emph {
+	background: #c84545;
+	color: #f4dada;
 }
 
 .category.disabled {

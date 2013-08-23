@@ -1,0 +1,452 @@
+.abjadic.rendered {
+	font-size: 24px;
+}
+
+.word {
+	display: inline-block;
+}
+
+.glyph {
+	display: inline-block;
+	background: url('/img/abjad.png');
+	height: 32px;
+	margin-top: 4px;
+	background-repeat: no-repeat;
+	background-size: 308px 1927px;
+	background-position-x: -2px;
+	background-position-y: -1808px;
+}
+
+/* vowels */
+
+.glyph.a {
+	width: 6px;
+	background-position-x: -27px;
+}
+
+.glyph.e {
+	width: 6px;
+	background-position-x: -53px;
+}
+
+.glyph.i {
+	width: 7px;
+	background-position-x: -79px;
+}
+
+.glyph.o {
+	width: 7px;
+	background-position-x: -103px;
+}
+
+.glyph.u {
+	width: 7px;
+	background-position-x: -130px;
+}
+
+.glyph.uh {
+	width: 3px;
+	background-position-x: -155px;
+}
+
+.glyph.ai {
+	width: 7px;
+	background-position-x: -178px;
+}
+
+.glyph.ei {
+	width: 7px;
+	background-position-x: -206px;
+}
+
+.glyph.ah {
+	width: 7px;
+	background-position-x: -231px;
+}
+
+.glyph.au {
+	width: 7px;
+	background-position-x: -255px;
+}
+
+.glyph.oi {
+	width: 7px;
+	background-position-x: -281px;
+}
+
+/* consonants */
+
+.glyph.b {
+	width: 13px;
+	background-position-y: -3px;
+}
+
+.glyph.p {
+	width: 10px;
+	background-position-y: -35px;
+}
+
+.glyph.m {
+	width: 12px;
+	height: 26px;
+	margin-bottom: 6px;
+	background-position-y: -67px;
+}
+
+.glyph.f {
+	width: 7px;
+	height: 36px;
+	margin-top: 0px;
+	background-position-y: -95px;
+}
+
+.glyph.v {
+	width: 12px;
+	margin-top: 6px;
+	background-position-y: -131px;
+}
+
+.glyph.th {
+	width: 13px;
+	height: 28px;
+	margin-top: 1px;
+	margin-bottom: 7px;
+	background-position-y: -160px;
+}
+
+.glyph.d {
+	width: 13px;
+	height: 28px;
+	margin-bottom: 4px;
+	background-position-y: -195px;
+}
+
+.glyph.t {
+	width: 7px;
+	height: 36px;
+	background-position-y: -223px;
+}
+
+.glyph.n {
+	width: 13px;
+	height: 28px;
+	margin-bottom: 4px;
+	background-position-y: -259px;
+}
+
+.glyph.l {
+	width: 6px;
+	height: 36px;
+	background-position-y: -287px;
+}
+
+.glyph.r {
+	width: 9px;
+	background-position-y: -323px;
+}
+
+.glyph.s {
+	width: 12px;
+	background-position-y: -355px;
+}
+
+.glyph.z {
+	width: 13px;
+	height: 28px;
+	margin-bottom: 4px;
+	background-position-y: -387px;
+}
+
+.glyph.j {
+	width: 6px;
+	height: 36px;
+	margin-top: 0px;
+	background-position-y: -415px;
+}
+
+.glyph.ch {
+	width: 14px;
+	height: 28px;
+	margin-bottom: 4px;
+	background-position-y: -451px;
+}
+
+.glyph.sh {
+	width: 7px;
+	margin-top: 0px;
+	margin-bottom: 4px;
+	background-position-y: -480px;
+}
+
+.glyph.g {
+	width: 13px;
+	background-position-y: -515px;
+}
+
+.glyph.k {
+	width: 12px;
+	height: 28px;
+	margin-bottom: 4px;
+	background-position-y: -547px;
+}
+
+.glyph.h {
+	width: 13px;
+	background-position-y: -579px;
+}
+
+.glyph.ng {
+	width: 13px;
+	background-position-y: -611px;
+}
+
+.glyph.nk {
+	width: 21px;
+	background-position-y: -643px;
+}
+
+.glyph.bb {
+	width: 13px;
+	background-position-y: -675px;
+}
+
+.glyph.pp {
+	width: 13px;
+	background-position-y: -707px;
+}
+
+.glyph.mm {
+	width: 12px;
+	background-position-y: -739px;
+}
+
+.glyph.ff {
+	width: 8px;
+	height: 36px;
+	margin-top: 0px;
+	background-position-y: -769px;
+}
+
+.glyph.vv {
+	width: 17px;
+	background-position-y: -803px;
+}
+
+.glyph.thh {
+	width: 13px;
+	background-position-y: -1840px;
+}
+
+.glyph.dd {
+	width: 13px;
+	background-position-y: -835px;
+}
+
+.glyph.tt {
+	width: 8px;
+	height: 36px;
+	margin-top: 0px;
+	background-position-y: -863px;
+}
+
+.glyph.nn {
+	width: 13px;
+	height: 28px;
+	margin-bottom: 4px;
+	background-position-y: -899px;
+}
+
+.glyph.ll {
+	width: 13px;
+	background-position-y: -927px;
+}
+
+.glyph.rr {
+	width: 11px;
+	background-position-y: -964px;
+}
+
+.glyph.ss {
+	width: 13px;
+	background-position-y: -995px;
+}
+
+.glyph.zz {
+	width: 12px;
+	background-position-y: -1027px;
+}
+
+.glyph.jj {
+	width: 6px;
+	background-position-y: -1059px;
+}
+
+.glyph.chh {
+	width: 13px;
+	background-position-y: -1092px;
+}
+
+.glyph.shh {
+	width: 8px;
+	height: 36px;
+	margin-top: 0px;
+	background-position-y: -1121px;
+}
+
+.glyph.gg {
+	width: 13px;
+	background-position-y: -1156px;
+}
+
+.glyph.kk {
+	width: 13px;
+	background-position-y: -1188px;
+}
+
+.glyph.mnt {
+	width: 20px;
+	background-position-y: -1220px;
+}
+
+.glyph.nd {
+	width: 20px;
+	background-position-y: -1252px;
+}
+
+.glyph.kn {
+	width: 12px;
+	background-position-y: -1280px;
+}
+
+.glyph.dn {
+	width: 13px;
+	height: 36px;
+	margin-top: 0px;
+	background-position-y: -1312px;
+}
+
+.glyph.dns {
+	width: 13px;
+	height: 34px;
+	margin-top: 2px;
+	background-position-y: -1342px;
+}
+
+.glyph.tn {
+	width: 13px;
+	height: 34px;
+	margin-top: 2px;
+	background-position-y: -1370px;
+}
+
+.glyph.wrd {
+	width: 13px;
+	background-position-y: -1404px;
+}
+
+.glyph.ns {
+	width: 13px;
+	background-position-y: -1436px;
+}
+
+.glyph.tns {
+	width: 13px;
+	height: 36px;
+	background-position-y: -1464px;
+}
+
+.glyph.thr {
+	width: 13px;
+	background-position-y: -1500px;
+}
+
+.glyph.tr {
+	width: 10px;
+	background-position-y: -1532px;
+}
+
+.glyph.fr {
+	width: 13px;
+	background-position-y: -1564px;
+}
+
+.glyph.x {
+	width: 13px;
+	background-position-y: -1596px;
+}
+
+.glyph.bl {
+	width: 13px;
+	height: 36px;
+	margin-top: 0px;
+	background-position-y: -1624px;
+}
+
+.glyph.pl {
+	width: 13px;
+	background-position-y: -1660px;
+}
+
+.glyph.kns {
+	width: 12px;
+	background-position-y: -1692px;
+}
+
+.glyph.mn {
+	width: 12px;
+	background-position-y: -1878px;
+}
+
+.glyph.ii {
+	width: 5px;
+	background-position-y: -1728px;
+}
+
+.glyph.ww {
+	width: 13px;
+	background-position-y: -1760px;
+}
+
+/* special */
+
+.glyph.ing {
+	width: 6px;
+	height: 16px;
+	margin-top: 20px;
+	background-position: -9px -1798px;
+}
+
+.glyph.ings {
+	width: 6px;
+	height: 16px;
+	margin-top: 20px;
+	background-position: -22px -1798px;
+}
+
+.glyph.ed {
+	width: 9px;
+	height: 16px;
+	margin-top: 20px;
+	background-position: -37px -1798px;
+}
+
+.glyph.es {
+	width: 6px;
+	height: 16px;
+	margin-top: 20px;
+	background-position: -49px -1798px;
+}
+
+.glyph.qw {
+	width: 7px;
+	height: 3px;
+	margin-bottom: 5px;
+	margin-left: -7px;
+	background-position: -79px -1815px;
+}
+
+.punct {
+	display: inline-block;
+	vertical-align: bottom;
+	margin-bottom: 10px;
+}

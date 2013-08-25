@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Virtual TR707</title>
+<meta charset="UTF-8">
+<script src="/js/jquery.2.js"></script>
+<style>
+body {
+	width: 612px;
+	margin: 16px auto;
+	background: #333;
+	color: #eee;
+	text-shadow: 0px 1px 1px #000;
+}
+h1 {
+	font-size: 48px;
+	margin-bottom: -16px;
+}
+div {
+	opacity: 0.8;
+	float: left;
+	width: 100px;
+	height: 100px;
+	background: #ccc;
+	border: 1px solid #000;
+	text-align: center;
+	vertical-align: middle;
+	color: #000;
+	text-shadow: 0px 1px 0px #fff,
+		1px 0px 0px #fff,
+		1px 1px 0px #fff,
+		0px -1px 0px #fff,
+		-1px 0px 0px #fff,
+		-1px -1px 0px #fff,
+		1px -1px 0px #fff,
+		-1px 1px 0px #fff;
+	box-shadow: inset 0px 0px 0px #222;
+}
+#footer {
+	display: block;
+	margin-top: 16px;
+	color: #888;
+}
+@media screen and (max-width: 612px) {
+	body { width: auto; margin: 16px 8px; }
+}
+</style>
+</head>
+<body>
+<h1>Virtual TR707</h1>
+<h6>by xsznix</h6>
+<div id="kick">Kick<br><span></span></div>
+<div id="snare">Snare<br><span></span></div>
+<div id="rim">Rim<br><span></span></div>
+<div id="clap">Clap<br><span></span></div>
+<div id="closedhat">Closed Hat<br><span></span></div>
+<div id="openhat">Open Hat<br><span></span></div>
+<div id="ride">Ride<br><span></span></div>
+<div id="crash">Crash<br><span></span></div>
+<div id="cowbell">Cowbell<br><span></span></div>
+<div id="tam">Tam<br><span></span></div>
+<div id="hitom">Hi Tom<br><span></span></div>
+<div id="midtom">Mid Tom<br><span></span></div>
+<div id="lotom">Lo Tom<br><span></span></div>
+<br style="clear:both">
+<h3>Recording</h3>
+<button id="startRecording" onclick="startRecording()">Start Recording</button>
+<button id="endRecording" disabled="disabled" onclick="endRecording()">End Recording</button>
+<button id="startPlayback" onclick="startPlayback()">Start Playback</button>
+<button id="stopPlayback" disabled="disabled" onClick="stopPlayback()">Stop Playback</button>
+<span id="recStatus" style="color:green">Ready</span>
+<br>
+Copy or paste recording here: <input id="recording" onclick="this.select()">
+<hr>
+<h3 id="options">
+Options
+<button id="optShow" onclick="$('#opt').show();$('#optShow').hide();$('#optHide').show()">Show</button>
+<button id="optHide" style="display: none" onclick="$('#opt').hide();$('#optShow').show();$('#optHide').hide()">Hide</button>
+</h3>
+<span id="opt" style="display:none">
+	<h4>Background</h4>
+	<button onclick="cats()">Cats!</button>
+	<button onclick="uncats()">No cats!</button>
+	<h4>Keybinding</h4>
+	<button onclick="setKeybinding(kb1)">Original</button>
+	<button onclick="setKeybinding(kb2)">New</button>
+	<br>
+	Protip: To set custom keybindings, go into the source code, look at the
+	format of the keybinding objects <code>kb1</code> and <code>kb2</code>,
+	create a new object in the same fashion, and then call <code>setKeybinding</code>
+	on your object.
+</span>
+
+<!--[if lt IE 9]>
+<script>
+/*! Respond.js v1.1.0: min/max-width media query polyfill. (c) Scott Jehl. MIT/GPLv2 Lic. j.mp/respondjs  */
+(function(e){e.respond={};respond.update=function(){};respond.mediaQueriesSupported=e.matchMedia&&e.matchMedia("only all").matches;if(respond.mediaQueriesSupported){return}var w=e.document,s=w.documentElement,i=[],k=[],q=[],o={},h=30,f=w.getElementsByTagName("head")[0]||s,g=w.getElementsByTagName("base")[0],b=f.getElementsByTagName("link"),d=[],a=function(){var D=b,y=D.length,B=0,A,z,C,x;for(;B<y;B++){A=D[B],z=A.href,C=A.media,x=A.rel&&A.rel.toLowerCase()==="stylesheet";if(!!z&&x&&!o[z]){if(A.styleSheet&&A.styleSheet.rawCssText){m(A.styleSheet.rawCssText,z,C);o[z]=true}else{if((!/^([a-zA-Z:]*\/\/)/.test(z)&&!g)||z.replace(RegExp.$1,"").split("/")[0]===e.location.host){d.push({href:z,media:C})}}}}u()},u=function(){if(d.length){var x=d.shift();n(x.href,function(y){m(y,x.href,x.media);o[x.href]=true;u()})}},m=function(I,x,z){var G=I.match(/@media[^\{]+\{([^\{\}]*\{[^\}\{]*\})+/gi),J=G&&G.length||0,x=x.substring(0,x.lastIndexOf("/")),y=function(K){return K.replace(/(url\()['"]?([^\/\)'"][^:\)'"]+)['"]?(\))/g,"$1"+x+"$2$3")},A=!J&&z,D=0,C,E,F,B,H;if(x.length){x+="/"}if(A){J=1}for(;D<J;D++){C=0;if(A){E=z;k.push(y(I))}else{E=G[D].match(/@media *([^\{]+)\{([\S\s]+?)$/)&&RegExp.$1;k.push(RegExp.$2&&y(RegExp.$2))}B=E.split(",");H=B.length;for(;C<H;C++){F=B[C];i.push({media:F.split("(")[0].match(/(only\s+)?([a-zA-Z]+)\s?/)&&RegExp.$2||"all",rules:k.length-1,hasquery:F.indexOf("(")>-1,minw:F.match(/\(min\-width:[\s]*([\s]*[0-9\.]+)(px|em)[\s]*\)/)&&parseFloat(RegExp.$1)+(RegExp.$2||""),maxw:F.match(/\(max\-width:[\s]*([\s]*[0-9\.]+)(px|em)[\s]*\)/)&&parseFloat(RegExp.$1)+(RegExp.$2||"")})}}j()},l,r,v=function(){var z,A=w.createElement("div"),x=w.body,y=false;A.style.cssText="position:absolute;font-size:1em;width:1em";if(!x){x=y=w.createElement("body");x.style.background="none"}x.appendChild(A);s.insertBefore(x,s.firstChild);z=A.offsetWidth;if(y){s.removeChild(x)}else{x.removeChild(A)}z=p=parseFloat(z);return z},p,j=function(I){var x="clientWidth",B=s[x],H=w.compatMode==="CSS1Compat"&&B||w.body[x]||B,D={},G=b[b.length-1],z=(new Date()).getTime();if(I&&l&&z-l<h){clearTimeout(r);r=setTimeout(j,h);return}else{l=z}for(var E in i){var K=i[E],C=K.minw,J=K.maxw,A=C===null,L=J===null,y="em";if(!!C){C=parseFloat(C)*(C.indexOf(y)>-1?(p||v()):1)}if(!!J){J=parseFloat(J)*(J.indexOf(y)>-1?(p||v()):1)}if(!K.hasquery||(!A||!L)&&(A||H>=C)&&(L||H<=J)){if(!D[K.media]){D[K.media]=[]}D[K.media].push(k[K.rules])}}for(var E in q){if(q[E]&&q[E].parentNode===f){f.removeChild(q[E])}}for(var E in D){var M=w.createElement("style"),F=D[E].join("\n");M.type="text/css";M.media=E;f.insertBefore(M,G.nextSibling);if(M.styleSheet){M.styleSheet.cssText=F}else{M.appendChild(w.createTextNode(F))}q.push(M)}},n=function(x,z){var y=c();if(!y){return}y.open("GET",x,true);y.onreadystatechange=function(){if(y.readyState!=4||y.status!=200&&y.status!=304){return}z(y.responseText)};if(y.readyState==4){return}y.send(null)},c=(function(){var x=false;try{x=new XMLHttpRequest()}catch(y){x=new ActiveXObject("Microsoft.XMLHTTP")}return function(){return x}})();a();respond.update=a;function t(){j(true)}if(e.addEventListener){e.addEventListener("resize",t,false)}else{if(e.attachEvent){e.attachEvent("onresize",t)}}})(this);
+
+// set opacity
+$('div').css('opacity', 0.8);
+</script>
+<![endif]-->
+
+
+<script>
+/* boxshadow hook (c) 2010 Burin Asavesna (http://helloburin.com). MIT Lic. */
+(function(a){function g(a,b,c){var d=a.split(e);d[c]=b;return d.join(" ")}var b=document.createElement("div"),c=b.style,d=a.support,e=/\s/,f=/\)\s/;d.boxShadow=c.MozBoxShadow===""?"MozBoxShadow":c.MsBoxShadow===""?"MsBoxShadow":c.WebkitBoxShadow===""?"WebkitBoxShadow":c.OBoxShadow===""?"OBoxShadow":c.boxShadow===""?"BoxShadow":false;b=null;if(d.boxShadow&&d.boxShadow!=="BoxShadow"){a.cssHooks.boxShadow={get:function(b,c,e){return a.css(b,d.boxShadow)},set:function(a,b){a.style[d.boxShadow]=b}};a.cssHooks.boxShadowColor={get:function(b,c,e){return a.css(b,d.boxShadow).split(f)[0]+")"},set:function(b,c){b.style[d.boxShadow]=c+" "+a.css(b,d.boxShadow).split(f)[1]}};a.cssHooks.boxShadowBlur={get:function(b,c,f){return a.css(b,d.boxShadow).split(e)[5]},set:function(b,c){b.style[d.boxShadow]=g(a.css(b,d.boxShadow),c,5)}};a.cssHooks.boxShadowSpread={get:function(b,c,f){return a.css(b,d.boxShadow).split(e)[6]},set:function(b,c){b.style[d.boxShadow]=g(a.css(b,d.boxShadow),c,6)}};a.cssHooks.boxShadowX={get:function(b,c,f){return a.css(b,d.boxShadow).split(e)[3]},set:function(b,c){b.style[d.boxShadow]=g(a.css(b,d.boxShadow),c,3)}};a.cssHooks.boxShadowY={get:function(b,c,f){return a.css(b,d.boxShadow).split(e)[4]},set:function(b,c){b.style[d.boxShadow]=g(a.css(b,d.boxShadow),c,4)}};var h="Blur Spread X Y".split(" ");a.each(h,function(b,c){var d="boxShadow"+c;a.fx.step[d]=function(b){a.cssHooks[d].set(b.elem,b.now+b.unit)}})}})(jQuery)
+
+// keycode map
+kcMap = {
+	8:"backspace", 9:"tab", 13:"return", 16:"shift", 17:"ctrl", 18:"alt", 19:"pausebreak", 20:"capslock", 27:"escape", 32:" ", 33:"pageup",
+	34:"pagedown", 35:"end", 36:"home", 37:"left", 38:"up", 39:"right", 40:"down", 43:"+", 44:"printscreen", 45:"insert", 46:"delete",
+	48:"0", 49:"1", 50:"2", 51:"3", 52:"4", 53:"5", 54:"6", 55:"7", 56:"8", 57:"9", 59:";",
+	61:"=", 65:"a", 66:"b", 67:"c", 68:"d", 69:"e", 70:"f", 71:"g", 72:"h", 73:"i", 74:"j", 75:"k", 76:"l",
+	77:"m", 78:"n", 79:"o", 80:"p", 81:"q", 82:"r", 83:"s", 84:"t", 85:"u", 86:"v", 87:"w", 88:"x", 89:"y", 90:"z",
+	96:"0", 97:"1", 98:"2", 99:"3", 100:"4", 101:"5", 102:"6", 103:"7", 104:"8", 105:"9",
+	106: "*", 107:"+", 109:"-", 110:".", 111: "/",
+	112:"f1", 113:"f2", 114:"f3", 115:"f4", 116:"f5", 117:"f6", 118:"f7", 119:"f8", 120:"f9", 121:"f10", 122:"f11", 123:"f12",
+	144:"numlock", 145:"scrolllock", 186:";", 187:"=", 188:",", 189:"-", 190:".", 191:"/", 192:"`", 219:"[", 220:"", 221:"]", 222:"'"
+};
+
+// number to high density number
+// uses ascii values from 33 to 126
+function dec2hd(num) {
+	if (num == undefined || num == 0)
+		return 0;
+	
+	var s = '';
+	while (num > 0) {
+		d = num % 93;
+		s = String.fromCharCode(d + 33) + s;
+		num = (num - d) / 93;
+	}
+	return s;
+}
+function hd2dec(s) {
+	var n = 0;
+	var j = s.length;
+	for (var i = 0; i < j; i++) {
+		n = 93 * n + s.charCodeAt(i) - 33;
+	}
+	return n;
+}
+
+// v2 file format
+var v2c = {
+	k: 'kick',
+	b: 'snare',
+	m: 'rim',
+	v: 'clap',
+	x: 'closedhat',
+	z: 'openhat',
+	a: 'ride',
+	q: 'crash',
+	w: 'cowbell',
+	s: 'tam',
+	g: 'hitom',
+	h: 'midtom',
+	j: 'lotom'
+}
+var v2crev = {
+	'kick': 'k',
+	'snare': 'b',
+	'rim': 'm',
+	'clap': 'v',
+	'closedhat': 'x',
+	'openhat': 'z',
+	'ride': 'a',
+	'crash': 'q',
+	'cowbell': 'w',
+	'tam': 's',
+	'hitom': 'g',
+	'midtom': 'h',
+	'lotom': 'j'
+}
+
+isRecording = false;
+recordStart = 0;
+// version 1: record = new Array();
+record = '';
+playback = new Array();
+
+function canPlay(type) { return (new Audio()).canPlayType(type); }
+function die() { alert('Your browser does not support audio playback!'); return '.ogg'; /* lolidk */ }
+function getSample(name) {
+	return new Audio('TR707/707_' + name +
+		(canPlay('audio/ogg') ? '.ogg' :
+			(canPlay('audio/mp3') ? '.mp3' :
+				(canPlay('audio/wav') ? '.WAV' : die()))));
+}
+// Bonus: Download this page using curl and plug in your own sample set.
+function createSampleList(index) {
+	return !index ? {
+		'kick': getSample('BD0'),
+		'snare': getSample('SD0'),
+		'rim': getSample('RIM'),
+		'clap': getSample('HCP'),
+		'closedhat': getSample('HHC'),
+		'openhat': getSample('HHO'),
+		'ride': getSample('RID'),
+		'crash': getSample('CRS'),
+		'cowbell': getSample('COW'),
+		'tam': getSample('TAM'),
+		'hitom': getSample('HT'),
+		'midtom': getSample('MT'),
+		'lotom': getSample('LT')
+	} : {
+		'kick': 0,
+		'snare': 0,
+		'rim': 0,
+		'clap': 0,
+		'closedhat': 0,
+		'openhat': 0,
+		'ride': 0,
+		'crash': 0,
+		'cowbell': 0,
+		'tam': 0,
+		'hitom': 0,
+		'midtom': 0,
+		'lotom': 0
+	};
+}
+
+// create samples list
+$(function(){
+	samples = new Array();
+	sEnd = 4; // redundancy because fast.
+	for (var i = 0; i < sEnd; i++) {
+		samples[i] = createSampleList(false);
+	}
+	samples[sEnd] = createSampleList(true);
+});
+
+function playSample(name) {
+	// play sample
+	samp = samples[samples[sEnd][name]][name];
+	samp.currentTime = 0;
+	samp.play();
+	samples[sEnd][name] = ++samples[sEnd][name] % sEnd;
+	
+	// emphasise corresponding div
+	el = $('#'+name);
+	el.stop().css({'opacity': 1, 'boxShadowBlur': '40px'});
+	el.stop().animate({opacity: 0.8, 'boxShadowBlur': '0px'}, 300);
+	
+	// record sample if recording
+	if (isRecording) {
+		// version 1: record[record.length] = [name, +new Date - recordStart];
+		record += v2crev[name] + dec2hd(+new Date - recordStart) + ' ';
+	}
+}
+
+// keybinding arrays
+var keybinding;
+kb1 = {
+	' ': 'kick',
+	b: 'snare',
+	n: 'snare',
+	m: 'rim',
+	v: 'clap',
+	x: 'closedhat',
+	c: 'closedhat',
+	z: 'openhat',
+	a: 'ride',
+	q: 'crash',
+	w: 'cowbell',
+	s: 'tam',
+	g: 'hitom',
+	h: 'midtom',
+	j: 'lotom'
+};
+kb2 = {
+	' ': 'kick',
+	b: 'kick',
+	n: 'kick',
+	g: 'snare',
+	h: 'snare',
+	m: 'rim',
+	v: 'clap',
+	d: 'closedhat',
+	f: 'closedhat',
+	s: 'openhat',
+	a: 'ride',
+	q: 'crash',
+	w: 'cowbell',
+	e: 'tam',
+	r: 'hitom',
+	j: 'hitom',
+	t: 'midtom',
+	k: 'midtom',
+	y: 'lotom',
+	l: 'lotom'
+};
+function setKeybinding(binding) {
+	// set keybinding variable
+	keybinding = binding;
+	// set the contents of each span to match the keybinding
+	$('div span').html('').each(function() {
+		keys = [];
+		for (var key in keybinding) {
+			if (keybinding[key] == $(this).parent().attr('id')) {
+				keys.push(key == ' ' ? 'space' : key);
+			}
+		}
+		$(this).html('(' + keys.join(', ') + ')');
+	});
+}
+setKeybinding(kb2);
+
+// event handler
+function play(e) {
+	// get keycode
+	var k;
+	if(window.event)
+		k = window.event.keyCode;
+	else
+		k = e.which;
+	kVal = kcMap[k];
+	
+	// play sample
+	samp = keybinding[kVal];
+	if (samp != undefined)
+		playSample(samp);
+}
+
+// basically decodes a version 2 recording into a version 1 recording for playback
+function decodeV2Recording(file) {
+	// blank recording check
+	if (file.length < 2) {
+		alert('Invalid recording.');
+		return;
+	}
+	file = file.substring(2).split(' ');
+	var r = new Array();
+	for (i in file) {
+		r.push([v2c[file[i].substr(0,1)], hd2dec(file[i].substr(1))]);
+	}
+	if (file[file.length - 1] == '') r.pop();
+	return r;
+}
+
+function startRecording() {
+	isRecording = true;
+	// version 1: record = new Array();
+	record = 'v2';
+	recordStart = +new Date;
+	$('#recStatus').html('Recording...');
+	
+	// enable/disable buttons
+	$('#startRecording').attr('disabled', 'disabled');
+	$('#endRecording').removeAttr('disabled');
+	$('#startPlayback').attr('disabled', 'disabled');
+	$('#stopPlayback').attr('disabled', 'disabled');
+}
+
+function endRecording() {
+	isRecording = false;
+	$('#recStatus').html('Ready');
+	
+	// version 1: display recording
+	/* recStr = '[';
+	for (i in record) {
+		recStr += '["' + record[i][0].toString() + '",' + record[i][1].toString() + '],';
+	}
+	recStr += ']';
+	$('#recording').attr('value', recStr);*/
+	$('#recording').attr('value', record);
+	
+	// enable/disable buttons
+	$('#startRecording').removeAttr('disabled');
+	$('#endRecording').attr('disabled', 'disabled');
+	$('#startPlayback').removeAttr('disabled');
+}
+
+function startPlayback() {
+	$('#recStatus').html('Playing...');
+	
+	file = $('#recording').attr('value');
+	
+	if (file.substr(0,2) == 'v2') {
+		record = decodeV2Recording(file);
+	}
+	// version 1: get recording
+	else {
+		try {
+			record = eval(file);
+		} catch (e) {
+			alert('Not a valid recording');
+			return;
+		}
+	}
+	
+	// set timeouts
+	playback = new Array();
+	for (i in record) {
+		playback.push(window.setTimeout(playSample, record[i][1], record[i][0]));
+	}
+	
+	// stop playback when done
+	playback.push(window.setTimeout(stopPlayback, record[record.length - 1][1] + 500));
+	
+	// enable/disable buttons
+	$('#startRecording').attr('disabled', 'disabled');
+	$('#endRecording').attr('disabled', 'disabled');
+	$('#startPlayback').attr('disabled', 'disabled');
+	$('#stopPlayback').removeAttr('disabled');
+}
+
+function stopPlayback() {
+	$('#recStatus').html('Ready');
+	for (i in playback) {
+		window.clearTimeout(playback[i]);
+	}
+	
+	// enable/disable buttons
+	$('#startRecording').removeAttr('disabled');
+	$('#startPlayback').removeAttr('disabled');
+	$('#stopPlayback').attr('disabled', 'disabled');
+}
+
+function cats() {
+	$('div').each(function(){
+		$(this).css('background','url("http://placekitten.com/'
+			+ parseInt(Math.random() * 100 + 100) + '/'
+			+ parseInt(Math.random() * 100 + 100) + '")');
+	});
+}
+function uncats() {
+	$('div').css('background', '#ccc');
+}
+
+// init
+$(function(){
+	// keyboard users
+	$(document).keydown(function(event) {play(event);});
+	// mouse/touch users
+	$('div').click(function(){
+		playSample($(this).attr('id'));
+	});
+	
+	// get url
+	if (window.location.hash) {
+		$('#recording').attr('value', decodeURI(window.location.hash.substring(1)));
+		startPlayback();
+	}
+});
+</script>
+<span id="footer">
+Samples were downloaded from <a href="http://samples.kb6.de/downloads.php">samples.kb6.de</a>.
+</span>
+</body>
+</html>

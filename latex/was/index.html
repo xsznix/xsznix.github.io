@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IB WAS LaTeX Template</title>
+	<link rel="stylesheet" type="text/css" href="/css/all.css">
+	<script type="text/javascript" src="/js/all.js"></script>
+</head>
+<body style="text-align:justify">
+	<div id="container">
+		<h1>IB WAS LaTeX Template</h1>
+		<p>Microsoft Word's formatting can be confusing sometimes. Fortunately, using LaTeX to write your paper can help you save a lot of trouble getting everything correct. The files are well-documented and they fully conform to Ms. Saenz's specifications on formatting as far as I know.</p>
+		<p>LaTeX is a powerful typesetting engine that is used widely in academia. If you plan on going into science or math, chances are you'll use LaTeX some time in your career. By separating the content from the formatting, you can focus on making the formatting once and then apply it everywhere in your content. And when you actually come to writing your content, you can forget about getting everything perfect; it's already been done.</p>
+		<p>LaTeX does not rely on and is not a replacement for Microsoft Word. It is not WYSIWYG and uses plain text files instead of a proprietary file format. Essentially, you can think of it as taking the contents of a text file, reads it, and outputs a PDF.</p>
+		<h2>Advantages</h2>
+		<ul>
+			<li>Stop fighting Word! All of the margins, spaces, indents, headers, footers, and citation styles are set for you. Just write and don't worry about formatting.</li>
+			<li>Use the powerful BibTeX citation engine to automatically format your citations.</li>
+			<li>An automatic and accurate word count shows up in the correct spot at the top of the page. It counts every word in the essay except for footnotes. Words in the header aren't counted, either.</li>
+			<li>Automatically generate bibliography and bibliographical citations.</li>
+		</ul>
+		<h2>Installing LaTeX</h2>
+		<p>If you are on Windows, you need to install <a href="http://miktex.org/">MiKTeX</a>. It is a simple package installer; download, hit install, and you're set.</p>
+		<p>If you are on OS X, you need to install <a href="https://www.tug.org/mactex/">MacTeX</a>, which is pretty much the exact same thing. Download, install, and you're set.</p>
+		<p>If you are on Linux, install <a href="https://www.tug.org/texlive/quickinstall.html">TeXLive</a>.</p>
+		<h2>Setting up a writing environment</h2>
+		<p>To edit LaTeX files, you will probably want an editor. Notepad is fine, if you are into that sort of thing, but I highly recommend <a href="http://www.xm1math.net/texmaker/">Texmaker</a>, which has a nice assortment of features, including the all-important spell-check.</p>
+		<p>You will have to make one configuration setting:</p>
+		<ol>
+			<li>Go to Texmaker preferences.</li>
+			<li>In the <i>Commands</i> tab, find the box labelled <i>LaTeX</i>.</li>
+			<li>In the contents of that box, replace <i>latex</i> with <i>xelatex</i>.<br>
+				On my system (OS X), this makes the value of the box <i>"/usr/texbin/xelatex" -interaction=nonstopmode %.tex</i>.</li>
+			<li>Click <i>OK</i>.</li>
+			<li>At the top of the screen to the right of the first arrow, make sure you have selected <i>LaTeX</i> and not <i>PDFLaTeX</i> as your rendering engine.</li>
+		</ol>
+		<p>This change is to use the XeLaTeX engine instead of the default PDFLaTeX. XeLaTeX supports system fonts; PDFLaTeX doesn't.</p>
+		<h2>Installing the template</h2>
+		<p><a href="/res/latex-ibwas.zip">Download the template</a> and extract it to any location you want; this should be the folder that you will do your WAS work in.</p>
+		<h2>Using the template</h2>
+		<p>The file that contains your assignment is called <i>Template.tex</i>. You will put your assignment/essay/whatever in this file, within the lines <code>\begin{essaybody}</code> and <code>\end{essaybody}</code>. Open this file in Texmaker to edit it.</p>
+		<p>LaTeX reads <i>Sources.bib</i> for bibliographic references. You may want to use a bibliography editor such as <a href="http://jabref.sourceforge.net/index.php">JabRef</a> or <a href="http://bibdesk.sourceforge.net/">BibDesk</a> to manage your references. These references are accessible from all of the <i>.tex</i> files in the folder it is in.</p>
+		<p>Keep all of your files in the same folder. You probably want to make a copy of the <i>Template.tex</i> file, as you will do multiple assignments in WAS using the same template.</p>
+		<p>To learn about how to use LaTeX, use an online resource, such as <a href="https://en.wikibooks.org/wiki/LaTeX">the WikiBooks book on it</a>.</p>
+		<h2>Quirks</h2>
+		<ul>
+			<li>To cite a source, use the command <code>\autocite{work}</code>, where <code>work</code> is the name of the work you are citing as defined in the BibTeX file.</li>
+			<li>To cite a source at a specific pagenumber, use the command <code>\citepage{work}{page}</code>, where <code>work</code> is the name of the work you are citing and <code>page</code> is the page number(s).</li>
+			<li>You will have to run BibTeX every time you update your bibliography.</li>
+			<li>You may have to run LaTeX twice every time to ensure that the word count and bibliography reflect the latest changes.</li>
+		</ul>
+		<p>If you can manage all of that, you are ready to become a LaTeX superstar! Good luck!</p>
+	</div>
+</body>
+</html>

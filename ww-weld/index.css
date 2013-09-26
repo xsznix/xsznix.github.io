@@ -1,0 +1,82 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:100,300);
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+
+/* http://www.colourlovers.com/palette/482774/dream_magnet */
+
+html, body {
+	margin: 0;
+	background: #00b4cc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+}
+
+h1 {
+	font-weight: 100;
+}
+
+p, a, li {
+	font-family: 'Lato', serif;
+	font-weight: 300;
+}
+
+a {
+	color: inherit;
+}
+
+.layer {
+	margin: 0;
+	padding: 8px 0;
+	color: rgba(255,255,255,0.9);
+}
+.layer_inner {
+	margin: 0 auto;
+	padding: 0 32px;
+	max-width: 564px;
+}
+
+.layer p, .layer li {
+	font-size: 18px;
+	line-height: 130%;
+	text-align: justify;
+}
+
+#topnav {
+	background: #00b4cc;
+}
+
+#home {
+	padding: 96px 0 48px 0;
+	text-align: center;
+}
+
+#tag { text-align: center; }
+
+#title {
+	font-size: 60px;
+}
+
+#titlesep {
+	border-top-width: 0;
+	max-width: 560px;
+	margin: 0 auto 48px auto;
+}
+
+#spacer {
+	height: 128px;
+}
+
+@media screen and (max-width: 960px) {
+	#title { font-size: 48px; }
+}
+
+@media screen and (max-width: 768px) {
+	#title { font-size: 36px; font-weight: 300; }
+}
+
+@media screen and (max-width: 560px) {
+	#title { font-size: 28px; }
+	.layer_inner { padding: 0 12px; }
+}

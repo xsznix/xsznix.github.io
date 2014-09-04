@@ -3,7 +3,7 @@
 	// white noise algorithm adapted from https://github.com/mattdiamond/synthjs
 	function NoiseGenFactory(context, stereo, bufSize){
 		bufSize = bufSize || 4096;
-		var node = context.createJavaScriptNode(bufSize, 1, 2);
+		var node = context.createScriptProcessor(bufSize, 1, 2);
 		node.onaudioprocess = function(e) {
 			var outBufferL = e.outputBuffer.getChannelData(0);
 			var outBufferR = e.outputBuffer.getChannelData(1);
@@ -35,7 +35,7 @@
 	// https://github.com/web-audio-components/pink-noise
 	function PinkNoiseFilterFactory(context, bufSize) {
 		bufSize = bufSize || 4096;
-		var node = context.createJavaScriptNode(bufSize, 2, 2);
+		var node = context.createScriptProcessor(bufSize, 2, 2);
 
 		node.onaudioprocess = function(e) {
 			var inBufferL = e.inputBuffer.getChannelData(0);
@@ -83,7 +83,7 @@
 	function BrownNoiseFilterFactory(context, bufSize) {
 		const SLOPE = 0.1, HPFILTER = 0.02;
 		bufSize = bufSize || 4096;
-		var node = context.createJavaScriptNode(bufSize, 2, 2);
+		var node = context.createScriptProcessor(bufSize, 2, 2);
 		var currentValueL = 0, currentValueR = 0;
 
 		node.onaudioprocess = function(e) {
@@ -113,7 +113,7 @@
 	// violet noise algorithm obtained by simply taking derivative of white noise
 	function VioletNoiseFilterFactory(context, bufSize) {
 		bufSize = bufSize || 4096;
-		var node = context.createJavaScriptNode(bufSize, 2, 2);
+		var node = context.createScriptProcessor(bufSize, 2, 2);
 		var currentValueL = 0, currentValueR = 0;
 
 		node.onaudioprocess = function(e) {
@@ -158,7 +158,7 @@
 		node3.frequency.value = 120;
 		node3.gain.value = 8;
 
-		var node4 = context.createGainNode();
+		var node4 = context.createGain();
 		node4.gain.value = 30;
 
 		node1.connect(node2);

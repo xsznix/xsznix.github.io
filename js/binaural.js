@@ -15,14 +15,14 @@ function Binaural() {
     this.osc2 = this.ctx.createOscillator();
 
     this.merger = this.ctx.createChannelMerger(2);
-    this.gainNode = this.ctx.createGainNode();
+    this.gainNode = this.ctx.createGain();
 
     this.whitenoise = this.ctx.createNoiseGen(true);
     this.pinknoise = this.ctx.createPinkNoiseFilter();
     this.brownnoise = this.ctx.createBrownNoiseFilter();
     this.violetnoise = this.ctx.createVioletNoiseFilter();
     this.greynoise = this.ctx.createGreyNoiseFilter();
-    this.bgGainNode = this.ctx.createGainNode();
+    this.bgGainNode = this.ctx.createGain();
 
     // hook everything up
     this.osc1.connect(this.merger, 0, 0); // I don't understand how this works

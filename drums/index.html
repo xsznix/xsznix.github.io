@@ -364,7 +364,7 @@ function endRecording() {
 	}
 	recStr += ']';
 	$('#recording').attr('value', recStr);*/
-	$('#recording').attr('value', record);
+	$('#recording').val(record);
 	
 	// enable/disable buttons
 	$('#startRecording').removeAttr('disabled');
@@ -375,7 +375,7 @@ function endRecording() {
 function startPlayback() {
 	$('#recStatus').html('Playing...');
 	
-	file = $('#recording').attr('value');
+	file = $('#recording').val();
 	
 	if (file.substr(0,2) == 'v2') {
 		record = decodeV2Recording(file);
@@ -440,7 +440,7 @@ $(function(){
 	
 	// get url
 	if (window.location.hash) {
-		$('#recording').attr('value', decodeURI(window.location.hash.substring(1)));
+		$('#recording').val(decodeURIComponent(window.location.hash.substring(1)));
 		startPlayback();
 	}
 });

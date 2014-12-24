@@ -1,0 +1,95 @@
+@import url(//fonts.googleapis.com/css?family=Josefin+Slab:100,300,300italic);
+@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
+
+html, body {
+	margin: 0;
+	background: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Josefin Slab';
+}
+
+h1 {
+	font-size: 42px;
+	font-weight: 300;
+}
+
+p, span, div {
+	font-family: 'Lato';
+	font-weight: 300;
+}
+
+#top {
+	padding: 64px 0;
+	background: #222;
+	text-align: center;
+	color: #bbb;
+}
+
+#profile {
+	width: 240px;
+	height: 240px;
+	border-radius: 120px;
+}
+
+#top h1 {
+	margin-top: 8px;
+	margin-bottom: 12px;
+	font-size: 64px;
+	font-weight: 100;
+}
+
+#top p {
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+#top .subtitle {
+	font-family: 'Josefin Slab';
+	font-style: italic;
+	margin-bottom: 16px;
+	font-size: 24px;
+}
+#top .intro {
+	font-size: 18px;
+}
+
+#top .lang {
+	margin-top: 12px;
+}
+
+#top .lang, #top .lang a {
+	font-size: 14px;
+	font-weight: 400;
+	color: #888;
+}
+
+#top a {
+	color: #ddd;
+}
+
+#top b {
+	color: #ccc;
+}
+
+.row {
+	margin: 0;
+	padding: 32px 0;
+	color: #444;
+}
+
+.row h1 {
+	text-align: center;
+	color: #666;
+}
+
+.row h1 .stura {
+	color: #ccc;
+	font-family: inherit;
+	font-weight: inherit;
+}
+
+.light {
+	background: #f4f4f4;
+}

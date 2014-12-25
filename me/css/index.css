@@ -1,95 +1,182 @@
 @import url(//fonts.googleapis.com/css?family=Josefin+Slab:100,300,300italic);
 @import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
 
-html, body {
-	margin: 0;
-	background: #f4f4f4;
+html,
+body
+{
+    margin: 0;
+
+    background: #f4f4f4;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Josefin Slab';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-family: 'Josefin Slab';
 }
 
-h1 {
-	font-size: 42px;
-	font-weight: 300;
+h1
+{
+    font-size: 42px;
+    font-weight: 300;
 }
 
-p, span, div {
-	font-family: 'Lato';
-	font-weight: 300;
+h2
+{
+    font-size: 32px;
+    font-weight: 300;
 }
 
-#top {
-	padding: 64px 0;
-	background: #222;
-	text-align: center;
-	color: #bbb;
+p,
+span,
+div
+{
+    font-family: 'Lato';
+    font-weight: 300;
 }
 
-#profile {
-	width: 240px;
-	height: 240px;
-	border-radius: 120px;
+#top
+{
+    padding: 64px 0;
+
+    text-align: center;
+
+    color: #bbb;
+    background: #222;
 }
 
-#top h1 {
-	margin-top: 8px;
-	margin-bottom: 12px;
-	font-size: 64px;
-	font-weight: 100;
+#profile
+{
+    width: 240px;
+    height: 240px;
+
+    border-radius: 120px;
 }
 
-#top p {
-	margin: 0 auto;
-	max-width: 500px;
+#top h1
+{
+    font-size: 64px;
+    font-weight: 100;
+
+    margin-top: 8px;
+    margin-bottom: 12px;
 }
 
-#top .subtitle {
-	font-family: 'Josefin Slab';
-	font-style: italic;
-	margin-bottom: 16px;
-	font-size: 24px;
-}
-#top .intro {
-	font-size: 18px;
+#top p
+{
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-#top .lang {
-	margin-top: 12px;
+#top .subtitle
+{
+    font-family: 'Josefin Slab';
+    font-size: 24px;
+    font-style: italic;
+
+    margin-bottom: 16px;
+}
+#top .intro
+{
+    font-size: 18px;
+    line-height: 150%;
 }
 
-#top .lang, #top .lang a {
-	font-size: 14px;
-	font-weight: 400;
-	color: #888;
+#top .lang
+{
+    margin-top: 16px;
 }
 
-#top a {
-	color: #ddd;
+#top .lang,
+#top .lang a
+{
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #888;
 }
 
-#top b {
-	color: #ccc;
+#top a
+{
+    color: #ddd;
 }
 
-.row {
-	margin: 0;
-	padding: 32px 0;
-	color: #444;
+#top b
+{
+    color: #ccc;
 }
 
-.row h1 {
-	text-align: center;
-	color: #666;
+.row
+{
+    margin: 0;
+    padding: 32px 0;
+
+    color: #444;
 }
 
-.row h1 .stura {
-	color: #ccc;
-	font-family: inherit;
-	font-weight: inherit;
+.row h1
+{
+    font-weight: 300;
+
+    margin-bottom: 16px;
+
+    text-align: center;
+
+    color: #666;
 }
 
-.light {
-	background: #f4f4f4;
+.row h1 .stura,
+.row h2 .stura
+{
+    font-family: inherit;
+    font-weight: inherit;
+
+    color: #bbb;
+    font-weight: 100;
+}
+
+.light
+{
+    background: #f4f4f4;
+}
+
+.row hr
+{
+    clear: both;
+
+    max-width: 200px;
+    margin: 0 auto;
+
+    border-top: 1px solid #ccc;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+.row section
+{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.row section img
+{
+    float: right;
+
+    margin-left: 36px;
+}
+
+.row p
+{
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.row.light a
+{
+    color: #2980b9;
 }

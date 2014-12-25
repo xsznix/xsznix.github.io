@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Josefin+Slab:100,300,300italic);
+@import url(//fonts.googleapis.com/css?family=Josefin+Slab:100,300,300italic,400);
 @import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
 
 html,
@@ -28,7 +28,7 @@ h1
 h2
 {
     font-size: 32px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 p,
@@ -120,13 +120,17 @@ div
 
 .row h1
 {
-    font-weight: 300;
+    font-weight: 400;
 
-    margin-bottom: 16px;
+    margin-bottom: 0;
 
     text-align: center;
 
     color: #666;
+}
+
+.row h2 {
+	margin-bottom: 16px;
 }
 
 .row h1 .stura,
@@ -146,10 +150,8 @@ div
 
 .row hr
 {
-    clear: both;
-
-    max-width: 200px;
-    margin: 0 auto;
+	max-width: 200px;
+    margin: 32px auto 0 auto;
 
     border-top: 1px solid #ccc;
     border-right: none;
@@ -159,6 +161,8 @@ div
 
 .row section
 {
+	clear: both;
+
     max-width: 960px;
     margin: 0 auto;
 }
@@ -168,6 +172,7 @@ div
     float: right;
 
     margin-left: 36px;
+    margin-bottom: 16px;
 }
 
 .row p

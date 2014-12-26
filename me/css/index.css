@@ -40,6 +40,18 @@ div
     font-weight: 300;
 }
 
+tt
+{
+    font-family: 'Courier New', monospace;
+    font-weight: 300;
+
+    padding: 0 4px;
+
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 2px;
+    background: rgba(255,255,255,.0625);
+}
+
 .clear
 {
     clear: both;
@@ -47,7 +59,12 @@ div
 
 #top
 {
-    padding: 64px 0;
+    position: relative;
+
+    box-sizing: border-box;
+    min-height: 710px;
+    height: 2500px; /* will be shrunk to fit on page load */
+    padding: 64px 0 0 0;
 
     text-align: center;
 
@@ -116,10 +133,61 @@ div
     color: #ccc;
 }
 
+nav
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 58px;
+
+    background: rgba(0,0,0,.125);
+
+    -webkit-transition: background 0.1s;
+    -o-transition: background 0.1s;
+    transition: background 0.1s;
+}
+
+nav.detached
+{
+	position: fixed;
+	top: 0;
+	bottom: auto;
+
+	background: url('../img/bg_top.png');
+	box-shadow: 0 0 24px rgba(0,0,0,.25);
+}
+
+nav a
+{
+    font-family: 'Josefin Slab';
+    font-size: 22px;
+
+    display: inline-block;
+
+    padding: 16px 24px;
+
+    -webkit-transition: background .2s;
+         -o-transition: background .2s;
+            transition: background .2s;
+    text-decoration: none;
+
+    background: rgba(255,255,255,0);
+}
+
+nav a:hover
+{
+    -webkit-transition: none;
+         -o-transition: none;
+            transition: none;
+
+    background: rgba(255,255,255,.125);
+}
+
 .row
 {
     margin: 0;
-    padding: 32px 0;
+    padding: 64px 0;
 
     color: #444;
 }
@@ -180,7 +248,7 @@ div
     max-width: 200px;
     margin: 32px auto 0 auto;
 
-    border-top: 1px solid rgba(127,127,127,0.5);
+    border-top: 1px solid rgba(127,127,127,.5);
     border-right: none;
     border-bottom: none;
     border-left: none;
@@ -215,9 +283,46 @@ div
 
 .col
 {
-	float: left;
+    float: left;
 
     box-sizing: border-box;
     width: 50%;
     padding: 12px;
+}
+
+#social ul
+{
+    padding-left: 0;
+
+    list-style-type: none;
+
+    text-align: center;
+}
+
+#social li
+{
+    display: inline-block;
+
+    margin: 0 16px;
+}
+
+#social .fa
+{
+    margin-right: 8px;
+
+    color: #444;
+}
+
+#copy
+{
+    font-size: 14px;
+
+    margin-top: 36px;
+
+    color: #888;
+}
+
+#copy a
+{
+    color: inherit;
 }

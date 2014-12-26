@@ -6,7 +6,8 @@ body
 {
     margin: 0;
 
-    background: #f4f4f4;
+    background: url('../img/bg_top.png');
+    background-attachment: fixed;
 }
 
 h1,
@@ -39,6 +40,11 @@ div
     font-weight: 300;
 }
 
+.clear
+{
+    clear: both;
+}
+
 #top
 {
     padding: 64px 0;
@@ -46,7 +52,7 @@ div
     text-align: center;
 
     color: #bbb;
-    background: #222;
+    box-shadow: inset 0 -64px 64px rgba(0,0,0,.125);
 }
 
 #profile
@@ -55,6 +61,7 @@ div
     height: 240px;
 
     border-radius: 120px;
+    box-shadow: 0 0 8px rgba(0,0,0,.125);
 }
 
 #top h1
@@ -125,22 +132,38 @@ div
     margin-bottom: 0;
 
     text-align: center;
+}
 
+.row.light h1
+{
     color: #666;
 }
 
-.row h2 {
-	margin-bottom: 16px;
+.row.dark h1
+{
+    color: #bbb;
 }
 
-.row h1 .stura,
-.row h2 .stura
+.row h2
+{
+    margin-bottom: 16px;
+}
+
+.row .stura
 {
     font-family: inherit;
     font-weight: inherit;
-
-    color: #bbb;
     font-weight: 100;
+}
+
+.row.light .stura
+{
+    color: #888;
+}
+
+.row.dark .stura
+{
+    color: #aaa;
 }
 
 .light
@@ -148,12 +171,17 @@ div
     background: #f4f4f4;
 }
 
+.dark
+{
+    color: #ddd;
+}
+
 .row hr
 {
-	max-width: 200px;
+    max-width: 200px;
     margin: 32px auto 0 auto;
 
-    border-top: 1px solid #ccc;
+    border-top: 1px solid rgba(127,127,127,0.5);
     border-right: none;
     border-bottom: none;
     border-left: none;
@@ -161,7 +189,7 @@ div
 
 .row section
 {
-	clear: both;
+    clear: both;
 
     max-width: 960px;
     margin: 0 auto;
@@ -171,8 +199,8 @@ div
 {
     float: right;
 
-    margin-left: 36px;
     margin-bottom: 16px;
+    margin-left: 36px;
 }
 
 .row p
@@ -184,4 +212,13 @@ div
 .row.light a
 {
     color: #2980b9;
+}
+
+.col
+{
+	float: left;
+
+    box-sizing: border-box;
+    width: 50%;
+    padding: 12px;
 }

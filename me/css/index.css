@@ -236,6 +236,7 @@ nav a:hover
 .light
 {
 	background: url('../img/grey.png');
+	background-attachment: fixed;
 }
 
 .dark

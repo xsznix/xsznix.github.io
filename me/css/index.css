@@ -142,10 +142,6 @@ nav
     height: 58px;
 
     background: rgba(0,0,0,.125);
-
-    -webkit-transition: background 0.1s;
-    -o-transition: background 0.1s;
-    transition: background 0.1s;
 }
 
 nav.detached

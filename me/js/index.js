@@ -45,13 +45,13 @@ function parallax () {
 	if (new_pax_t - pax_t < 30) return;
 	pax_t = new_pax_t;
 
-	var s = Math.floor(window.scrollY / 4);
-	var ss = -s + 'px';
-	var ss_neg = s + 'px';
-	document.body.style.backgroundPositionY = ss;
-	$nav.style.backgroundPositionY = ss;
+	var offset = window.scrollY;
+	var scaledOffset = -Math.floor(offset / 4) + 'px';
+	var squareOffset = Math.floor(offset / 8) + 'px';
+	document.body.style.backgroundPositionY = scaledOffset;
+	$nav.style.backgroundPositionY = scaledOffset;
 	for (var i = 0, len = $lightrows.length; i < len; i++) {
-		$lightrows[i].style.backgroundPositionY = ss_neg;
+		$lightrows[i].style.backgroundPositionY = squareOffset;
 	}
 }
 

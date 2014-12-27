@@ -17,13 +17,16 @@ function onPageLoad (callback) {
 }
 
 var $top = document.getElementById('top');
-function resizeTop () {
+var $nav = document.getElementsByTagName('nav')[0];
+var $lightrows = document.getElementsByClassName('light');
+
+function resize () {
 	$top.style.height = window.innerHeight + 'px';
+	parallax();
 }
 
-var $nav = document.getElementsByTagName('nav')[0];
 var navAttached = true;
-function handleNav () {
+function stickynav () {
 	if (navAttached && window.scrollY > window.innerHeight - 58) {
 		$nav.className = 'detached';
 		navAttached = false;
@@ -34,7 +37,25 @@ function handleNav () {
 	}
 }
 
-onPageLoad(resizeTop);
-onPageLoad(handleNav);
-window.onresize = resizeTop;
-window.onscroll = handleNav;
+var pax_t = 0;
+function parallax () {
+	// limit to approx. 30 FPS
+	pax_t;
+	var new_pax_t = +new Date;
+	if (new_pax_t - pax_t < 30) return;
+	pax_t = new_pax_t;
+
+	var s = Math.floor(window.scrollY / 2);
+	var ss = -s + 'px';
+	var ss_neg = s + 'px';
+	document.body.style.backgroundPositionY = ss;
+	$nav.style.backgroundPositionY = ss;
+	for (var i = 0, len = $lightrows.length; i < len; i++) {
+		$lightrows[i].style.backgroundPositionY = ss_neg;
+	}
+}
+
+onPageLoad(resize);
+onPageLoad(stickynav);
+window.onresize = resize;
+window.onscroll = function () { stickynav(); parallax(); };

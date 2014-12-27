@@ -235,7 +235,7 @@ nav a:hover
 
 .light
 {
-    background: #f4f4f4;
+	background: url('../img/grey.png');
 }
 
 .dark

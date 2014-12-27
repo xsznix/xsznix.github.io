@@ -45,7 +45,7 @@ function parallax () {
 	if (new_pax_t - pax_t < 30) return;
 	pax_t = new_pax_t;
 
-	var s = Math.floor(window.scrollY / 2);
+	var s = Math.floor(window.scrollY / 4);
 	var ss = -s + 'px';
 	var ss_neg = s + 'px';
 	document.body.style.backgroundPositionY = ss;

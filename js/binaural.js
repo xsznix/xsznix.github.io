@@ -141,7 +141,7 @@ function Binaural() {
     }
 
     this.start = function () {
-        this.osc1.noteOn(0);
-        this.osc2.noteOn(0);
+        this.osc1.start(0);
+        this.osc2.start(0);
     }
 }

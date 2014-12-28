@@ -40,7 +40,6 @@ function stickynav () {
 var pax_t = 0;
 function parallax () {
 	// limit to approx. 30 FPS
-	pax_t;
 	var new_pax_t = +new Date;
 	if (new_pax_t - pax_t < 30) return;
 	pax_t = new_pax_t;

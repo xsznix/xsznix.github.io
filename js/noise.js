@@ -2,7 +2,7 @@
 
 	// white noise algorithm adapted from https://github.com/mattdiamond/synthjs
 	function NoiseGenFactory(context, stereo, bufSize){
-		bufSize = bufSize || 4096;
+		bufSize = bufSize || 8192;
 		var node = context.createScriptProcessor(bufSize, 1, 2);
 		node.onaudioprocess = function(e) {
 			var outBufferL = e.outputBuffer.getChannelData(0);
@@ -34,7 +34,7 @@
 	// pink noise algorithm and helper functions adapted from
 	// https://github.com/web-audio-components/pink-noise
 	function PinkNoiseFilterFactory(context, bufSize) {
-		bufSize = bufSize || 4096;
+		bufSize = bufSize || 8192;
 		var node = context.createScriptProcessor(bufSize, 2, 2);
 
 		node.onaudioprocess = function(e) {
@@ -82,7 +82,7 @@
 	// brown noise algorithm adapted from http://www.source-code.biz/snippets/java/BrownNoiseGenerator.java
 	function BrownNoiseFilterFactory(context, bufSize) {
 		const SLOPE = 0.1, HPFILTER = 0.02;
-		bufSize = bufSize || 4096;
+		bufSize = bufSize || 8192;
 		var node = context.createScriptProcessor(bufSize, 2, 2);
 		var currentValueL = 0, currentValueR = 0;
 
@@ -112,7 +112,7 @@
 
 	// violet noise algorithm obtained by simply taking derivative of white noise
 	function VioletNoiseFilterFactory(context, bufSize) {
-		bufSize = bufSize || 4096;
+		bufSize = bufSize || 8192;
 		var node = context.createScriptProcessor(bufSize, 2, 2);
 		var currentValueL = 0, currentValueR = 0;
 
@@ -140,32 +140,48 @@
 	}
 
 	// a couple of biquads should reasonably approximate grey noise
-	// probably still a really rough approximation though :-/
+	// wow Voxengo SPAN is a really good analyzer plugin heh
 	function GreyNoiseFilterFactory(context) {
+
 		var node1 = context.createBiquadFilter();
-		node1.type = node1.PEAKING;
-		node1.frequency.value = 1500;
-		node1.Q.value = 0.04;
-		node1.gain.value = -40;
+		node1.type = "lowshelf";
+		node1.frequency.value = 100;
+		node1.gain.value = 40;
 
 		var node2 = context.createBiquadFilter();
-		node2.type = node2.HIGHSHELF;
-		node2.frequency.value = 14000;
+		node2.type = "peaking";
+		node2.frequency.value = 3500;
+		node2.Q.value = 0.3;
 		node2.gain.value = -10;
 
 		var node3 = context.createBiquadFilter();
-		node3.type = node3.LOWSHELF;
-		node3.frequency.value = 120;
-		node3.gain.value = 8;
+		node3.type = "peaking";
+		node3.frequency.value = 550;
+		node3.Q.value = 0.2;
+		node3.gain.value = 5;
 
-		var node4 = context.createGain();
-		node4.gain.value = 30;
+		var node4 = context.createBiquadFilter();
+		node4.type = "peaking";
+		node4.frequency.value = 160;
+		node4.Q.value = 0.4;
+		node4.gain.value = -6;
+
+		var node5 = context.createBiquadFilter();
+		node5.type = "peaking";
+		node5.frequency.value = 1100;
+		node5.Q.value = 0.5;
+		node5.gain.value = -8;
+
+		var node6 = context.createGain();
+		node6.gain.value = 0.5;
 
 		node1.connect(node2);
 		node2.connect(node3);
 		node3.connect(node4);
+		node4.connect(node5);
+		node5.connect(node6);
 
-		return [node1, node4];
+		return [node1, node6];
 	}
 
 	AudioContext.prototype.createNoiseGen = function(stereo, bufSize){ return NoiseGenFactory(this, stereo, bufSize); };

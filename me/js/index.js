@@ -46,7 +46,8 @@ function parallax () {
 
 	var offset = window.scrollY;
 	var scaledOffset = -Math.floor(offset / 4) + 'px';
-	var squareOffset = Math.floor(offset / 8) + 'px';
+	// var squareOffset = Math.floor(offset / 8) + 'px';
+	var squareOffset = scaledOffset;
 	document.body.style.backgroundPositionY = scaledOffset;
 	$nav.style.backgroundPositionY = scaledOffset;
 	for (var i = 0, len = $lightrows.length; i < len; i++) {

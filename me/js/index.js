@@ -21,8 +21,8 @@ var $nav = document.getElementsByTagName('nav')[0];
 var $lightrows = document.getElementsByClassName('light');
 
 function resize () {
-	$top.style.height = window.innerHeight + 'px';
-	parallax();
+	$top.height(window.innerHeight);
+	// parallax();
 }
 
 var navAttached = true;
@@ -58,7 +58,7 @@ function parallax () {
 onPageLoad(resize);
 onPageLoad(stickynav);
 window.onresize = resize;
-window.onscroll = function () { stickynav(); parallax(); };
+window.onscroll = function () { stickynav(); /* parallax(); */ };
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

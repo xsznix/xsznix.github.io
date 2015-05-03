@@ -21,7 +21,7 @@ var $nav = document.getElementsByTagName('nav')[0];
 var $lightrows = document.getElementsByClassName('light');
 
 function resize () {
-	$top.height(window.innerHeight);
+	$top.style.height = window.innerHeight + 'px';
 	// parallax();
 }
 

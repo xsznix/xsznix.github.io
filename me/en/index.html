@@ -4,64 +4,157 @@
 		<title>Xuming Zeng</title>
 		<meta charset="utf-8">
 		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Josefin+Slab:100,300,300italic,400">
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,400,700">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="../css/index.css">
 	</head>
 	<body>
 		<div id="top">
 			<img id="profile" src="../img/me.png" alt="a picture of my beautiful face">
 			<h1>Xuming Zeng</h1>
-			<p class="subtitle">Programmer, musician, linguist, life enthusiast</p>
-			<p class="intro">Hi! I am a first year <b>computer science</b> and <b>linguistics</b> student at the <b>University of Texas at Austin</b>. I enjoy programming, especially web development, and making music. You can find my <b>résumé</b> on my <a href="http://cs.utexas.edu/~zengx/resume">UT Computer Science website</a>.</p>
+			<p class="subtitle">Web developer, musician, linguist</p>
+			<i id="arrow" class="fa fa-chevron-down"></i>
 
 			<nav>
-				<a href="#section-program">Stuff I've Programmed</a>
-				<a href="#section-music">Music I've Made</a>
-				<a href="#section-dothings">Work With Me</a>
+				<a href="#section-education">Education</a>
+				<a href="#section-portfolio">Portfolio</a>
+				<a href="#section-experience">Experience</a>
+				<a href="#section-music">Music</a>
 			</nav>
 		</div>
 
-		<div id="section-program" class="light row">
-			<h1>Stuff I've Programmed</h1>
-			
+		<div id="section-education" class="burnt-orange row">
+			<h1>Education</h1>
+
 			<hr>
 
-			<section>
-				<h2><a href="https://xsznix.github.io/js-y86/">JS-Y86</a></h2>
-				<img width="454" height="284" src="../img/js-y86.png" alt="screenshot of JS-Y86">
-				<p>JS-Y86 is a Y86 assembler and simulator, forked from <a href="https://github.com/vaguilar/js-y86">another project</a> of the same name. Y86 is a minimal subset of x86 used for teaching fundamental concepts of assembly and processor design in the textbook <a href="http://csapp.cs.cmu.edu/"><i>Computer Systems: A Programmer's Perspective</i></a>. JS-Y86 improves upon the official simulator program by integrating a text editor with custom syntax highlighting and adding the ability to step through code and set breakpoints.</p>
-			</section>
-			<div class="clear"></div>
-
-			<section>
-				<h2>QuickHAC</h2>
-				<img width="601" height="361" src="../img/quickhac.jpg" alt="screenshot of QuickHAC">
-				<p>QuickHAC is a covenient alternative interface to the gradebook website used by my former high school district, implemented as a Chrome extension. It aims to provide a superior user experience by organizing information in a layout that is intuitive, informative, and aesthetically pleasing. It is on the <a href="https://chrome.google.com/webstore/detail/quickhac/dnboopdmbbpaicaphfkcphonijbfhopg">Chrome Web Store</a>. The grades shown in the screenshot at the right are <i>not anybody's real grades</i> and are for demonstration purposes only.</p>
-			</section>
-			<div class="clear"></div>
-
-			<section>
-				<h2>Schedule Comparinator</h2>
-				<img width="634" height="289" src="../img/schedule-comparinator.jpg" alt="screenshot of Schedule Comparinator">
-				<p>Schedule Comparinator is an annual web app for middle and high school students to find out who's in their classes before the first class day. Students enter in their schedules and instantly see who else is in the classes that they're in. Schedule Comparinator runs from mid-August to early September.</p>
-			</section>
-			<div class="clear"></div>
-
-			<section>
-				<div class="col">
-					<h2><a href="/binaural/">Binaural Beats</a></h2>
-					<p>The most flexible binaural beats generator on the web (that I know of), featuring a skeuomorphic, DAW plugin-like control panel and five types of noise generation. Uses the HTML 5 Web Audio API.</p>
+			<section class="thin">
+				<div class="list-item">
+					<i class="fa fa-university" style="margin-top:-7px"></i>
+					<div>
+						<p>The University of Texas at Austin</p>
+						<p class="sub">Class of 2018</p>
+					</div>
 				</div>
-				<div class="col">
-					<h2><a href="/drums/">Virtual TR707</a></h2>
-					<p>A straightforward, keyboard-enabled, plugin-free and (mostly) lag-free online drum kit in JavaScript using the HTML 5 Audio API. Includes the ability to record riffs to plaintext and play them back.</p>
+				<div class="list-item">
+					<i class="fa fa-certificate" style="margin-top:-4px"></i>
+					<div>
+						<p>BS Computer Science &amp; BA Linguistics</p>
+						<p class="sub">Digital Arts &amp; Media certificate</p>
+					</div>
+				</div>
+				<div class="list-item">
+					<i class="fa fa-line-chart" style="margin-top:-5px"></i>
+					<div>
+						<p>3.90 GPA</p>
+					</div>
+				</div>
+				<div class="list-item">
+					<i class="fa fa-book" style="margin-top:-4px"></i>
+					<div>
+						<p>Coursework</p>
+						<ul id="coursework">
+							<li><span class="num">CS 311</span> Discrete Mathematics</li>
+							<li><span class="num">CS 314</span> Data Structures</li>
+							<li><span class="num">CS 429</span> Systems I</li>
+						</p>
+					</div>
 				</div>
 			</section>
-			<div class="clear"></div>
+		</div>
+
+		<div id="section-portfolio" class="light row">
+			<div class="inner">
+				<h1>Portfolio</h1>
+				
+				<hr>
+				
+				<section>
+					<img width="480" height="300" src="../img/js-y86.png" alt="screenshot of JS-Y86">
+					<a class="caption" id="jsy86-caption" href="https://xsznix.github.io/js-y86/">
+						<h2>JS-Y86</h2>
+						<p>JS-Y86 simulates a simple assembly language running on a von Neumann machine in order to teach important low lewel programming concepts such as registers, memory, and stack management.</p>
+					</a>
+				</section>
+				
+				<section>
+					<img width="480" height="300" src="../img/quickhac.png" alt="screenshot of QuickHAC">
+					<a href="https://chrome.google.com/webstore/detail/quickhac/dnboopdmbbpaicaphfkcphonijbfhopg" class="caption" id="qhac-caption">
+						<h2>QuickHAC</h2>
+						<p>QuickHAC provides an enhanced gradebook experience for middle and high school students in Round Rock ISD.</p>
+					</a>
+				</section>
+				
+				<section>
+					<img width="480" height="300" src="../img/schedcmp.png" alt="screenshot of Schedule Comparinator">
+					<div class="caption" id="schedcmp-caption">
+						<h2>Schedule Comparinator</h2>
+						<p>Schedule Comparinator helps middle and high school students instantly find out who's in their classes before the first class day. It runs annually from mid-August to early September.</p>
+					</div>
+				</section>
+
+				<section>
+					<img width="480" height="300" src="../img/binaural.png" alt="screenshot of Binaural Beats">
+					<a href="https://xsznix.github.io/binaural/" class="caption" id="binaural-caption">
+						<h2>Binaural Beats</h2>
+						<p>The most flexible binaural beats generator on the web, featuring a skeuomorphic, DAW plugin-like control panel and five types of noise generation using the HTML5 Web Audio API.</p>
+					</a>
+				</section>
+			</div>
+		</div>
+
+		<div id="section-experience" class="semilight row">
+			<h1>Experience</h1>
+
+			<hr>
+
+			<section class="thin">
+				<div class="chart">
+					<div class="bar" style="width:100%">
+						<span class="label"><b>JavaScript</b> incl. jQuery, RequireJS, Bower, and Grunt</span>
+						</div>
+					<div class="bar" style="width:100%">
+					<span class="label"><b>HTML</b> incl. writing and scraping</span></div>
+					<div class="bar" style="width:98%">
+						<span class="label"><b>CSS</b> incl. SASS/SCSS/LESS</span>
+					</div>
+					<div class="bar" style="width:93%">
+						<span class="label"><b>Linux command line</b></span>
+					</div>
+					<div class="bar" style="width:90%">
+						<span class="label"><b>Git</b></span>
+					</div>
+					<div class="bar" style="width:87%">
+						<span class="label"><b>Backbone</b> with Underscore</span>
+					</div>
+					<div class="bar" style="width:85%">
+						<span class="label"><b>NodeJS</b> incl. nwjs</span>
+					</div>
+					<div class="bar" style="width:77%">
+						<span class="label"><b>Java</b></span>
+					</div>
+					<div class="bar" style="width:65%">
+						<span class="label"><b>Design</b> UI and UX</span>
+					</div>
+					<div class="bar" style="width:55%">
+						<span class="label"><b>Ruby</b> incl. Sinatra</span>
+					</div>
+					<div class="bar" style="width:30%">
+						<span class="label"><b>ReactJS</b></span>
+					</div>
+				</div>
+				<div class="chart-legend">
+					<div class="left">Familiar</div>
+					<div class="right">Expert</div>
+					<div class="center">Proficient</div>
+				</div>
+				<div class="clear"></div>
+			</section>
 		</div>
 
 		<div id="section-music" class="dark row">
-			<h1>Music I've Made</h1>
+			<h1>Music</h1>
 
 			<hr>
 
@@ -78,10 +171,10 @@
 				<div class="clear"></div>
 
 				<div class="col">
-					<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/8562100&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+					<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/8562100&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
 				</div>
 				<div class="col">
-					<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/8562122&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+					<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/8562122&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
 				</div>
 
 				<div class="clear"></div>
@@ -98,35 +191,19 @@
 				<div class="clear"></div>
 
 				<div class="col">
-					<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/67061032&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+					<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/67061032&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
 				</div>
 				<div class="col">
-					<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/22077891&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+					<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/22077891&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
 				</div>
 
 				<div class="clear"></div>
 			</section>
 		</div>
 
-		<div id="section-dothings" class="light row bottom">
-			<h1>Work With Me</h1>
-
-			<hr>
-
-			<section>
-				<div class="col">
-					<h2>Develop With Me</h2>
-					<p>I'm always excited for innovative programming projects! If you have a good idea and want to work with me, or you want to join the effort on one of my side projects, just shoot me an email at the address listed below.</p>
-				</div>
-				<div class="col">
-					<h2>Piano With Me</h2>
-					<p>Do you need a reasonably priced, background pianist who can improvise and play by ear? I specialize in light, ambient solo piano music, but I can accommodate to any special requests you may have.</p>
-				</div>
-			</section>
-			<div class="clear"></div>
+		<div id="section-footer" class="light row bottom">
 
 			<section id="social">
-				<h2>Find Me on the Internet</h2>
 				<ul>
 					<li><i class="fa fa-github"></i><a href="https://github.com/xsznix">@xsznix</a></li>
 					<li><i class="fa fa-tumblr"></i><a href="https://quirnius.tumblr.com/">@quirnius</a></li>
@@ -137,7 +214,7 @@
 			</section>
 
 			<section>
-				<p id="copy">&copy; 2014 Xuming Zeng. <a href="http://subtlepatterns.com/">Background texture</a></p>
+				<p id="copy">&copy; 2015 Xuming Zeng. <a href="http://subtlepatterns.com/">Background texture</a></p>
 			</section>
 		</div>
 

@@ -27,11 +27,11 @@ function resize () {
 
 var navAttached = true;
 function stickynav () {
-	if (navAttached && window.scrollY > window.innerHeight - 58) {
+	if (navAttached && window.scrollY > Math.max(652, window.innerHeight - 58)) {
 		$nav.className = 'detached';
 		navAttached = false;
 	}
-	else if (!navAttached && window.scrollY <= window.innerHeight - 58) {
+	else if (!navAttached && window.scrollY <= Math.max(652, window.innerHeight - 58)) {
 		$nav.className = '';
 		navAttached = true;
 	}

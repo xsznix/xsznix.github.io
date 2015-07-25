@@ -481,7 +481,12 @@ nav a:hover
 
 #social ul
 {
+    width: 280px;
+    max-width: 100%;
+    margin: 0 auto;
     padding-left: 0;
+
+    line-height: 32px;
 
     list-style-type: none;
 
@@ -490,13 +495,13 @@ nav a:hover
 
 #social li
 {
-    display: inline-block;
-
-    margin: 0 16px;
+    text-align: left;
 }
 
 #social .fa
 {
+    width: 16px;
+    text-align: right;
     margin-right: 8px;
 
     color: #444;

@@ -1,0 +1,95 @@
+* {
+	font-family: Merriweather, Georgia, serif;
+}
+
+body {
+	margin: 0;
+}
+
+.title {
+	margin-bottom: -12px;
+	text-align: center;
+}
+
+.title-sub {
+	color: #888;
+	font-size: 18px;
+	text-align: center;
+}
+
+.table-wrap {
+	overflow-x: auto;
+	width: 100%;
+}
+table {
+	height: auto;
+	overflow-x: auto;
+	line-height: 130%;
+	margin-bottom: 32px;
+}
+
+td, th {
+	border-collapse: collapse;
+}
+
+th a {
+	display: block;
+	margin-top: -2px;
+	text-decoration: none;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+table td {
+	min-width: 360px;
+	border-top: 1px solid #eee;
+	padding: 0 8px;
+	margin: 0;
+	vertical-align: top;
+	font-size: 13px;
+}
+
+blockquote {
+	font-style: italic;
+}
+
+tr.supplementary {
+	background: #f4f4f4;
+	color: #999;
+}
+
+.hl {
+	background: rgba(255, 255, 190, 0.8);
+	cursor: pointer;
+	margin: -3px -2px;
+	padding: 3px 2px;
+}
+
+.hl.active {
+	background: rgb(255, 255, 0);
+}
+
+sup, sub {
+   vertical-align: baseline;
+   position: relative;
+   top: -0.4em;
+}
+
+a {
+	color: #4689f2;
+}
+
+img {
+	display: block;
+	margin: 8px auto;
+}
+
+.caption {
+	width: 90%;
+	max-width: 640px;
+	margin: 0 auto 16px auto;
+	font-size: 14px;
+	color: #aaa;
+	font-style: italic;
+	text-align: center;
+}

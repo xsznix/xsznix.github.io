@@ -41,12 +41,13 @@ th a {
 }
 
 table td {
-	min-width: 360px;
+	min-width: 260px;
+	width: 1%;
 	border-top: 1px solid #eee;
 	padding: 0 8px;
 	margin: 0;
 	vertical-align: top;
-	font-size: 13px;
+	font-size: 12px;
 }
 
 blockquote {

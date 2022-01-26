@@ -71,6 +71,11 @@ a {
   font-size: 14px;
 }
 
+#react-root {
+  min-height: 529px;
+  margin-bottom: 24px;
+}
+
 #errors {
   height: 17px;
   width: 287px;
@@ -199,8 +204,8 @@ button:not(:disabled) {
 
 .game-action {
   width: fit-content;
-  padding-left: 12px;
-  padding-right: 16px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .modal-action {
@@ -251,6 +256,10 @@ button.secondary {
 .modal > h2 {
   margin-top: 8px;
   font-weight: 500;
+}
+
+#about {
+  line-height: 1.4;
 }
 
 /* need to move the solver into a web worker to enable loading animation

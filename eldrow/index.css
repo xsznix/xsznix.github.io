@@ -2,6 +2,7 @@ html {
   --main-width: 500px;
   --body-background-color: #121213;
   --color: #d7dadc;
+  --tile-color: #d7dadc;
   --secondary-color: #88898a;
   --error-color: #dc3a28;
   --error-background-color: #4c201b;
@@ -17,12 +18,14 @@ html {
 }
 
 html.colorblind {
-  --tile-present-color: #00AEE2;
-  --tile-correct-color: #FF6500;
+  --tile-color: white;
+  --tile-present-color: #0090bb;
+  --tile-correct-color: #e55b00;
 }
 
 html.high-contrast {
   --color: white;
+  --tile-color: white;
   --body-background-color: black;
   --secondary-color: #ddd;
   --tile-border-color: white;
@@ -146,7 +149,7 @@ a {
   margin: 3px;
   border: 2px solid var(--tile-border-color);
 
-  color: var(--color);
+  color: var(--tile-color);
 
   font-size: 30px;
   font-weight: 700;

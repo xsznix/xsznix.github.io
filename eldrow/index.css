@@ -177,7 +177,7 @@ a {
   border-color: var(--tile-not-present-color);
 }
 
-html.high-contrast .tile.score-not-present {
+html.high-contrast .tile {
   border-color: var(--tile-border-color);
 }
 
@@ -288,14 +288,25 @@ html.high-contrast button.secondary {
   font-weight: 500;
 }
 
-#settings {
-  margin-top: 40px;
-}
-
 #about, #settings {
   line-height: 1.4;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 8px;
+  padding: 0 8px;
+}
+
+#settings {
+  margin-top: 40px;
+  line-height: 40px;
+}
+
+#settings > label {
+  display: block;
+  height: 40px;
+  cursor: pointer;
+}
+
+#settings input {
+  margin-right: 8px;
 }

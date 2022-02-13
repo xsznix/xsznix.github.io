@@ -1,0 +1,234 @@
+/* globals and resets */
+
+:root {
+  /* colors */
+  --fg-general: #fff;
+  --bg-general: #0c0429;
+
+  --fg-primary: #ff8b56;
+  --fg-secondary: #ccc;
+
+  /* fonts */
+  --serif-font: 'Noticia Text';
+  --sans-serif-font: 'Titillium Web';
+  --mono-font: 'Fira Code';
+
+  --animation-speed: .8s;
+}
+
+/*.light-section {
+  --fg-general: #0c0429;
+  --bg-general: #fff;
+
+  --fg-secondary: #444;
+
+  background: url("/me/img/grey.png");
+  background-repeat: repeat repeat;
+  color: var(--fg-general);
+}*/
+
+body {
+  width: 100%;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--bg-general);
+  color: var(--fg-general);
+
+  font-family: var(--sans-serif-font);
+
+  hyphens: auto;
+}
+
+body > * {
+  padding-left: max(min(12rem, 5vw), 1rem);
+  padding-right: max(min(12rem, 5vw), 1rem);
+}
+
+a {
+  color: var(--fg-primary);
+}
+
+/* header */
+
+#header {
+  padding-top: max(5rem, min(calc(50vh - 12rem), 20vw));
+  padding-bottom: 5rem;
+  box-sizing: border-box;
+  min-height: min(100vh, 100vw);
+}
+
+#intro {
+  margin: 0;
+  color: var(--fg-primary);
+  font-family: var(--serif-font);
+  font-size: 1.5rem;
+}
+
+#my-name {
+  position: relative;
+  margin: 0;
+  font-family: var(--mono-font);
+  font-size: min(7vw, 4rem);
+}
+
+/* START header > name animation */
+
+.name-initial, .name-rest, #unixname {
+  display: inline-block;
+  position: absolute;
+}
+
+.name-initial {
+  transition: var(--animation-speed) cubic-bezier(0.215, 0.610, 0.355, 1.000) transform;
+}
+
+.name-rest {
+  opacity: 1;
+  transition: var(--animation-speed) cubic-bezier(0.215, 0.610, 0.355, 1.000) transform, var(--animation-speed) cubic-bezier(0.950, 0.050, 0.795, 0.035) opacity;
+}
+
+#name-rest-1 {
+  transform: translateX(0.6em);
+}
+
+#name-nick-initial {
+  transform: translateX(4.8em);
+}
+
+#name-rest-2 {
+  transform: translateX(5.4em);
+}
+
+#name-last-initial {
+  transform: translateX(9em);
+}
+
+#name-rest-3 {
+  transform: translateX(9.6em);
+}
+
+#unixname {
+  transform: translateX(15em);
+  opacity: 0;
+  transition: var(--animation-speed) cubic-bezier(0.215, 0.610, 0.355, 1.000) transform, var(--animation-speed) cubic-bezier(0.215, 0.610, 0.355, 1.000) opacity;
+}
+
+#my-name.scrolled .name-initial {
+  text-transform: lowercase;
+}
+
+#my-name.scrolled .name-rest {
+  opacity: 0;
+  transition: var(--animation-speed) cubic-bezier(0.215, 0.610, 0.355, 1.000) transform, var(--animation-speed) cubic-bezier(0.190, 1.000, 0.220, 1.000) opacity;
+}
+
+#my-name.scrolled #name-nick-initial {
+  transform: translateX(0.6em);
+}
+
+#my-name.scrolled #name-last-initial {
+  transform:  translateX(1.2em);
+}
+
+#my-name.scrolled #unixname {
+  opacity: 1;
+  transform: translateX(1.8em);
+  transition: var(--animation-speed) cubic-bezier(0.215, 0.610, 0.355, 1.000) transform, var(--animation-speed) cubic-bezier(0.190, 1.000, 0.220, 1.000) opacity;
+}
+
+/* END header > name animation */
+
+/* START header > name mask */
+
+#name-animation {
+  user-select: none;
+}
+
+#fullname-mask, #unixname-mask {
+  position: relative;
+  color: #fff0;
+  display: inline-block;
+  z-index: 1;
+}
+
+#unixname-mask {
+  display: none;
+}
+
+#my-name.scrolled #fullname-mask {
+  display: none;
+}
+
+#my-name.scrolled #unixname-mask {
+  display: inline-block;
+}
+
+#my-name.no-animations #fullname-mask,
+#my-name.no-animations #unixname-mask {
+  color: var(--fg-general);
+}
+
+#my-name.no-animations #name-animation {
+  color: #fff0;
+}
+
+/* END header > name mask */
+
+p, ul {
+  box-sizing: border-box;
+  max-width: 48rem;
+  text-align: justify;
+
+  color: var(--fg-secondary);
+  font-size: 1.125rem;
+}
+
+.subtitle {
+  color: var(--fg-secondary);
+
+  font-size: 1.375rem;
+  font-weight: 300;
+}
+
+/* main */
+
+section {
+  padding-bottom: 8rem;
+}
+
+h2 {
+  font-family: var(--serif-font);
+  font-size: min(5vw, 2.5rem);
+}
+
+h3 {
+  font-family: var(--mono-font);
+  font-size: min(4vw, 1.75rem);
+}
+
+/* main > about me */
+
+#tech-list {
+  list-style-type: none;
+  padding-left: 0;
+  columns: 10rem;
+
+  font-family: var(--mono-font);
+}
+
+/* main > about me > icons */
+.icon24 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: .25rem;
+  margin-right: .375rem;
+}
+
+/* main > showcase */
+h3 .icon24 {
+  top: 0;
+}

@@ -41,8 +41,6 @@ function Binaural() {
     this.pinknoise.connect(this.bgGainNode);
     this.bgGainNode.connect(this.masterGainNode);
 
-    this.masterGainNode.connect(this.ctx.destination);
-
     // initial values
     this.osc1.frequency.value = this.baseFreq - this.beatFreq * 0.5;
     this.osc2.frequency.value = this.baseFreq + this.beatFreq * 0.5;
@@ -83,11 +81,7 @@ function Binaural() {
         this.muted = m;
         if (m) {
             this.masterGainNode.disconnect();
-            this.muteBeats(true);
-            this.muteNoise(true);
         } else {
-            this.muteBeats(false);
-            this.muteNoise(false);
             this.masterGainNode.connect(this.ctx.destination);
         }
     }
@@ -118,7 +112,7 @@ function Binaural() {
 
     this.muteBeats = function (m) {
         this.beatsMuted = m;
-        if (this.muted || m) {
+        if (m) {
             this.osc1.disconnect();
             this.osc2.disconnect();
         } else {
@@ -129,7 +123,7 @@ function Binaural() {
 
     this.muteNoise = function (m) {
         this.noiseMuted = m;
-        if (this.muted || m) {
+        if (m) {
             this.whitenoise.disconnect();
             this.pinknoise.disconnect();
             this.brownnoise.disconnect();
@@ -141,6 +135,7 @@ function Binaural() {
     }
 
     this.start = function () {
+        this.ctx.resume();
         this.osc1.start(0);
         this.osc2.start(0);
     }

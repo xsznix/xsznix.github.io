@@ -13,23 +13,15 @@
   --sans-serif-font: 'Titillium Web';
   --mono-font: 'Fira Code';
 
+  /* animation parameters */
+  --mono-character-width: .6em;
   --animation-speed: .8s;
 }
 
-/*.light-section {
-  --fg-general: #0c0429;
-  --bg-general: #fff;
-
-  --fg-secondary: #444;
-
-  background: url("/me/img/grey.png");
-  background-repeat: repeat repeat;
-  color: var(--fg-general);
-}*/
-
 body {
-  width: 100%;
+  width: 100vw;
   margin: 0;
+  overflow-x: hidden;
 
   display: flex;
   flex-direction: column;
@@ -47,6 +39,19 @@ body > * {
   padding-right: max(min(12rem, 5vw), 1rem);
 }
 
+h1, h2, h3, p, ul {
+  box-sizing: border-box;
+  max-width: 48rem;
+}
+
+p, ul {
+  box-sizing: border-box;
+  text-align: justify;
+
+  color: var(--fg-secondary);
+  font-size: 1.125rem;
+}
+
 a {
   color: var(--fg-primary);
 }
@@ -61,20 +66,30 @@ a {
 }
 
 #intro {
+  position: relative;
+  z-index: 2;
   margin: 0;
   color: var(--fg-primary);
   font-family: var(--serif-font);
-  font-size: 1.5rem;
+  font-size: 1.375rem;
 }
 
 #my-name {
-  position: relative;
+  position: sticky;
+  top: 0;
   margin: 0;
+  z-index: 1;
+  overflow: visible;
+
+  background: var(--bg-general);
+}
+
+h1 {
   font-family: var(--mono-font);
   font-size: min(7vw, 4rem);
 }
 
-/* START header > name animation */
+/* header > name animation */
 
 .name-initial, .name-rest, #unixname {
   display: inline-block;
@@ -91,27 +106,27 @@ a {
 }
 
 #name-rest-1 {
-  transform: translateX(0.6em);
+  transform: translateX(calc(var(--mono-character-width) * 1));
 }
 
 #name-nick-initial {
-  transform: translateX(4.8em);
+  transform: translateX(calc(var(--mono-character-width) * 8));
 }
 
 #name-rest-2 {
-  transform: translateX(5.4em);
+  transform: translateX(calc(var(--mono-character-width) * 9));
 }
 
 #name-last-initial {
-  transform: translateX(9em);
+  transform: translateX(calc(var(--mono-character-width) * 15));
 }
 
 #name-rest-3 {
-  transform: translateX(9.6em);
+  transform: translateX(calc(var(--mono-character-width) * 16));
 }
 
 #unixname {
-  transform: translateX(15em);
+  transform: translateX(calc(var(--mono-character-width) * 25));
   opacity: 0;
   transition: var(--animation-speed) cubic-bezier(0.215, 0.610, 0.355, 1.000) transform, var(--animation-speed) cubic-bezier(0.215, 0.610, 0.355, 1.000) opacity;
 }
@@ -126,22 +141,40 @@ a {
 }
 
 #my-name.scrolled #name-nick-initial {
-  transform: translateX(0.6em);
+  transform: translateX(calc(var(--mono-character-width) * 1));
 }
 
 #my-name.scrolled #name-last-initial {
-  transform:  translateX(1.2em);
+  transform:  translateX(calc(var(--mono-character-width) * 2));
 }
 
 #my-name.scrolled #unixname {
   opacity: 1;
-  transform: translateX(1.8em);
+  transform: translateX(calc(var(--mono-character-width) * 3));
   transition: var(--animation-speed) cubic-bezier(0.215, 0.610, 0.355, 1.000) transform, var(--animation-speed) cubic-bezier(0.190, 1.000, 0.220, 1.000) opacity;
 }
 
-/* END header > name animation */
+/* header > name sticky header hacks */
 
-/* START header > name mask */
+#my-name.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding-left: max(min(12rem, 5vw), 1rem);
+  padding-right: max(min(12rem, 5vw), 1rem);
+  max-width: unset;
+}
+
+#my-name-spacer {
+  display: none;
+  user-select: none;
+}
+
+#my-name.fixed + #my-name-spacer {
+  display: block;
+}
+
+/* header > name mask */
 
 #name-animation {
   user-select: none;
@@ -175,24 +208,6 @@ a {
   color: #fff0;
 }
 
-/* END header > name mask */
-
-p, ul {
-  box-sizing: border-box;
-  max-width: 48rem;
-  text-align: justify;
-
-  color: var(--fg-secondary);
-  font-size: 1.125rem;
-}
-
-.subtitle {
-  color: var(--fg-secondary);
-
-  font-size: 1.375rem;
-  font-weight: 300;
-}
-
 /* main */
 
 section {
@@ -201,15 +216,22 @@ section {
 
 h2 {
   font-family: var(--serif-font);
-  font-size: min(5vw, 2.5rem);
+  font-size: max(min(5vw, 2.5rem), 2rem);
 }
 
 h3 {
   font-family: var(--mono-font);
-  font-size: min(4vw, 1.75rem);
+  font-size: max(min(4vw, 1.75rem), 1.5rem);
 }
 
 /* main > about me */
+
+.subtitle {
+  color: var(--fg-secondary);
+
+  font-size: 1.5rem;
+  font-weight: 300;
+}
 
 #tech-list {
   list-style-type: none;
@@ -220,15 +242,54 @@ h3 {
 }
 
 /* main > about me > icons */
-.icon24 {
-  position: relative;
-  width: 1.5rem;
-  height: 1.5rem;
-  top: .25rem;
+
+#tech-list .icon24 {
   margin-right: .375rem;
 }
 
+.icon24 {
+  position: relative;
+  top: .25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 /* main > showcase */
+
 h3 .icon24 {
-  top: 0;
+  top: .125rem;
+}
+
+@media only screen and (max-width: 480px) {
+  h3 .icon24 {
+    display: none;
+  }
+}
+
+.links {
+  text-align: left;
+  font-family: var(--serif-font);
+}
+
+h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.25rem;
+}
+
+h3 + .links {
+  margin-top: 0.25rem;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.screenshot {
+  aspect-ratio: 2.56;
+  max-width: 48rem;
+  width: 100%;
 }

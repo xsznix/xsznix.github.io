@@ -55,3 +55,7 @@ animateName: {
     isFixed = isNowFixed;
   });
 }
+
+copyright: {
+  document.getElementById('current-year').innerText = new Date().getFullYear().toString();
+}

@@ -37,7 +37,7 @@
 						</div>
 						<h2>
 							Binaural Beats
-							<input type="checkbox" id="beats-mute" class="muter" defaultChecked="false">
+							<input type="checkbox" id="beats-mute" class="muter" checked>
 							<label for="beats-mute">Mute</label>
 						</h2>
 					</div>
@@ -57,7 +57,7 @@
 						<label for="greynoise">Grey</label>
 						<h2>
 							Noise
-							<input type="checkbox" id="noise-mute" class="muter" defaultChecked="false">
+							<input type="checkbox" id="noise-mute" class="muter" checked>
 							<label for="noise-mute">Mute</label>
 						</h2>
 					</div>
@@ -85,7 +85,7 @@
 					</div>
 
 					<div id="master-mute">
-						<input type="checkbox" id="mutebox" class="muter" defaultChecked="false">
+						<input type="checkbox" id="mutebox" class="muter" checked>
 						<label for="mutebox">Mute All</label>
 					</div>
 
@@ -228,7 +228,11 @@
 			bin.setNoiseType(noiseType());
 		});
 
-		bin.start();
+		bin.muteBeats(true);
+		bin.muteNoise(true);
+		mutebox.one('change', function() {
+			bin.start();
+		});
 	})
 	</script>
 </body>

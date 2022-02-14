@@ -1,7 +1,0 @@
-var vocab; // stores all vocabulary
-
-const LEVELS_PER_EDITION = 2;
-const EDITION1_LEVEL1_LESSONS = 23;
-const EDITION1_LEVEL2_LESSONS = 20;
-const EDITION3_LEVEL1_LESSONS = 20;
-const EDITION3_LEVEL2_LESSONS = 20;

@@ -10,15 +10,18 @@ greeting: {
 
 animateName: {
   const $myName = document.getElementById('my-name');
-  const $nameFirstInitial = document.getElementById('name-first-initial');
   let noAnim = true;
   let noAnimTimeout;
+  let lastScrolled = false;
   function scrollIfNeeded(animate, isScrolled) {
-    if (isScrolled) {
+    if (isScrolled && !lastScrolled) {
       $myName.classList.add('scrolled');
-    } else if (!isScrolled) {
+    } else if (!isScrolled && lastScrolled) {
       $myName.classList.remove('scrolled');
+    } else {
+      return;
     }
+    lastScrolled = isScrolled;
     if (!animate && noAnim) {
       $myName.classList.add('no-animations');
       noAnim = true;
@@ -32,11 +35,6 @@ animateName: {
         noAnim = true;
       }, 800);
     }
-    const letterStyle = getComputedStyle($nameFirstInitial);
-    document.documentElement.style.setProperty(
-      '--mono-character-width',
-      parseFloat(letterStyle.getPropertyValue('width')) / parseFloat(letterStyle.getPropertyValue('font-size')) + 'em',
-    )
   }
   let firstTime = true;
   new IntersectionObserver(e => {

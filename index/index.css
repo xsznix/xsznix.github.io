@@ -17,11 +17,11 @@
   --mono-font: 'Fira Code';
 
   /* animation parameters */
-  --mono-character-width: .6em;
   --animation-speed: .8s;
 }
 
-html, body {
+html {
+  width: 100vw;
 }
 
 body {
@@ -85,6 +85,7 @@ a {
   top: 0;
   z-index: 1;
   overflow: visible;
+  will-change: transform;
 
   background: var(--bg-general);
 }
@@ -112,27 +113,27 @@ h1 {
 }
 
 #name-rest-1 {
-  transform: translateX(calc(var(--mono-character-width) * 1));
+  transform: translateX(1ch);
 }
 
 #name-nick-initial {
-  transform: translateX(calc(var(--mono-character-width) * 8));
+  transform: translateX(8ch);
 }
 
 #name-rest-2 {
-  transform: translateX(calc(var(--mono-character-width) * 9));
+  transform: translateX(9ch);
 }
 
 #name-last-initial {
-  transform: translateX(calc(var(--mono-character-width) * 15));
+  transform: translateX(15ch);
 }
 
 #name-rest-3 {
-  transform: translateX(calc(var(--mono-character-width) * 16));
+  transform: translateX(16ch);
 }
 
 #unixname {
-  transform: translateX(calc(var(--mono-character-width) * 22));
+  transform: translateX(22ch);
   opacity: 0;
   transition: var(--animation-speed) cubic-bezier(0.215, 0.610, 0.355, 1.000) transform, var(--animation-speed) cubic-bezier(0.215, 0.610, 0.355, 1.000) opacity;
 }
@@ -147,16 +148,16 @@ h1 {
 }
 
 #my-name.scrolled #name-nick-initial {
-  transform: translateX(calc(var(--mono-character-width) * 1));
+  transform: translateX(1ch);
 }
 
 #my-name.scrolled #name-last-initial {
-  transform:  translateX(calc(var(--mono-character-width) * 2));
+  transform:  translateX(2ch);
 }
 
 #my-name.scrolled #unixname {
   opacity: 1;
-  transform: translateX(calc(var(--mono-character-width) * 3));
+  transform: translateX(3ch);
   transition: var(--animation-speed) cubic-bezier(0.215, 0.610, 0.355, 1.000) transform, var(--animation-speed) cubic-bezier(0.190, 1.000, 0.220, 1.000) opacity;
 }
 
@@ -271,6 +272,7 @@ h3 {
 
   font-size: 1.5rem;
   font-weight: 300;
+  text-align: left;
 }
 
 #tech-list {

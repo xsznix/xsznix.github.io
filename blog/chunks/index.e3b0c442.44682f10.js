@@ -1,0 +1,1 @@
+const o="_withColors_das5s_1",s="_root_das5s_19",t="_week_das5s_25",_="_event_das5s_33",n="_school_das5s_37",a="_work_das5s_41",e="_past_das5s_45",c="_now_das5s_49",r="_future_das5s_53",d="_tooltip_das5s_57",l={withColors:o,root:s,week:t,event:_,school:n,work:a,past:e,now:c,"blink-today":"_blink-today_das5s_1",future:r,tooltip:d};export{l as s};

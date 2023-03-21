@@ -1,0 +1,1 @@
+const o="_withColors_16axm_1",t="_root_16axm_37",_="_week_16axm_49",s="_event_16axm_65",n="_school_16axm_73",a="_work_16axm_81",e="_past_16axm_89",c="_now_16axm_97",r="_future_16axm_105",l="_tooltip_16axm_113",w={withColors:o,root:t,week:_,event:s,school:n,work:a,past:e,now:c,"blink-today":"_blink-today_16axm_1",future:r,tooltip:l};export{w as s};

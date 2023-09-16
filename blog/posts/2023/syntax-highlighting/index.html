@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="/blog/avatar.png">
+    <meta name="generator" content="Astro v1.9.2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,500&family=Fira+Code&family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <title>Coding in Monochrome</title>
+  <link rel="stylesheet" href="/blog/assets/carpal-tunnel.63c972dc.css" />
+<link rel="stylesheet" href="/blog/assets/syntax-highlighting.111e6606.css" /></head>
+  <body>
+    <nav class="astro-GAGMBZX2">
+  <a href="/blog/" class="astro-GAGMBZX2">Home</a>
+  <span aria-hidden="true" class="astro-GAGMBZX2">|</span> Simon&rsquo;s Tidbits
+</nav>
+<main class="astro-GTFH3CCH">
+    <div class="root astro-IBCG3J65" role="presentation">
+  <h1 class="title astro-IBCG3J65">Coding in Monochrome</h1>
+  <p class="subtitle astro-IBCG3J65" role="doc-subtitle">A minimalist color philosophy for syntax highlighting</p>
+  
+</div>
+
+    <article class="astro-GTFH3CCH"><p>There are certain things that every nerd reinvents from scratch at some point in their life, and text editor color schemes are close to the top of that list.</p>
+<p>My contribution to this discussion about deeply personal opinions aims to explore the purpose of color as a tool for communication, not aesthetics. If you want your code to look like a rainbow—which there’s nothing wrong with—you probably won’t like the approach I present below. But for those who simply want their code to be maximally legible, this might be for you.</p>
+<p>To start off, let’s take a look at the color scheme I came up with:</p>
+<pre class="media-width _root_6d49j_1"><span class="_accent_6d49j_18">/**<br/> * Returns the factorial of a non-negative integer. Throws if the<br/> * input is negative or not an integer.<br/> *<br/> * A factorial of a number N is the product of all positive integers<br/> * less than or equal to N. By definition, the factorial of 0 is 1.<br/> */</span><br/><span class="_dimmed_6d49j_14">export function</span> factorial<span class="_dimmed_6d49j_14">(</span>num<span class="_dimmed_6d49j_14">: number,</span> acc <span class="_dimmed_6d49j_14">= </span>1<span class="_dimmed_6d49j_14">) {</span><br/>	<span class="_dimmed_6d49j_14">if (</span>num <span class="_dimmed_6d49j_14">&lt;</span> 0<span class="_dimmed_6d49j_14"> || !</span>Number<span class="_dimmed_6d49j_14">.</span>isInteger<span class="_dimmed_6d49j_14">(</span>num<span class="_dimmed_6d49j_14">))</span><br/>		<span class="_dimmed_6d49j_14">throw new </span>RangeError<span class="_dimmed_6d49j_14">(</span><br/>			<span class="_dimmed_6d49j_14">&quot;</span>Can&#x27;t calculate factorial for non-integer or negative number<span class="_dimmed_6d49j_14">&quot;,</span><br/>		<span class="_dimmed_6d49j_14">);</span><br/><br/>	<span class="_dimmed_6d49j_14">if (</span>num <span class="_dimmed_6d49j_14">&lt;=</span> 1<span class="_dimmed_6d49j_14">)</span> <span class="_dimmed_6d49j_14">return</span> 1<span class="_dimmed_6d49j_14">;</span><br/><br/>	<span class="_accent_6d49j_18">// Passing the second param makes this a tail call</span><br/>	<span class="_dimmed_6d49j_14">return</span> factorial<span class="_dimmed_6d49j_14">(</span>num <span class="_dimmed_6d49j_14">-</span> 1<span class="_dimmed_6d49j_14">,</span> acc <span class="_dimmed_6d49j_14">*</span> num<span class="_dimmed_6d49j_14">);</span><br/><span class="_dimmed_6d49j_14">}</span></pre>
+<p>And for reference, here’s the same code in the default syntax highlighting theme from Astro, the static site generator I’m using:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#8B949E">/**</span></span>
+<span class="line"><span style="color:#8B949E"> * Returns the factorial of a non-negative integer. Throws if the</span></span>
+<span class="line"><span style="color:#8B949E"> * input is negative or not an integer.</span></span>
+<span class="line"><span style="color:#8B949E"> *</span></span>
+<span class="line"><span style="color:#8B949E"> * A factorial of a number N is the product of all positive integers</span></span>
+<span class="line"><span style="color:#8B949E"> * less than or equal to N. By definition, the factorial of 0 is 1.</span></span>
+<span class="line"><span style="color:#8B949E"> */</span></span>
+<span class="line"><span style="color:#FF7B72">export</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">function</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">factorial</span><span style="color:#C9D1D9">(</span><span style="color:#FFA657">num</span><span style="color:#FF7B72">:</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">number</span><span style="color:#C9D1D9">, </span><span style="color:#FFA657">acc</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">=</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">1</span><span style="color:#C9D1D9">) {</span></span>
+<span class="line"><span style="color:#C9D1D9">	</span><span style="color:#FF7B72">if</span><span style="color:#C9D1D9"> (num </span><span style="color:#FF7B72">&lt;</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">0</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">||</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">!</span><span style="color:#C9D1D9">Number.</span><span style="color:#D2A8FF">isInteger</span><span style="color:#C9D1D9">(num))</span></span>
+<span class="line"><span style="color:#C9D1D9">		</span><span style="color:#FF7B72">throw</span><span style="color:#C9D1D9"> </span><span style="color:#FF7B72">new</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">RangeError</span><span style="color:#C9D1D9">(</span></span>
+<span class="line"><span style="color:#C9D1D9">			</span><span style="color:#A5D6FF">&quot;Can&#39;t calculate factorial for non-integer or negative number&quot;</span><span style="color:#C9D1D9">,</span></span>
+<span class="line"><span style="color:#C9D1D9">		);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">	</span><span style="color:#FF7B72">if</span><span style="color:#C9D1D9"> (num </span><span style="color:#FF7B72">&lt;=</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">1</span><span style="color:#C9D1D9">) </span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">1</span><span style="color:#C9D1D9">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">	</span><span style="color:#8B949E">// Passing the second param makes this a tail call</span></span>
+<span class="line"><span style="color:#C9D1D9">	</span><span style="color:#FF7B72">return</span><span style="color:#C9D1D9"> </span><span style="color:#D2A8FF">factorial</span><span style="color:#C9D1D9">(num </span><span style="color:#FF7B72">-</span><span style="color:#C9D1D9"> </span><span style="color:#79C0FF">1</span><span style="color:#C9D1D9">, acc </span><span style="color:#FF7B72">*</span><span style="color:#C9D1D9"> num);</span></span>
+<span class="line"><span style="color:#C9D1D9">}</span></span></code></pre>
+<p>It’s immediately obvious how much more colorful Astro makes the code. And it’s not just Astro. Take a moment to look through <a href="https://vscodethemes.com/">VS Code Themes</a>, a website that showcases some of the most popular themes for VS Code. All of the most popular themes are extremely colorful—most of the text on the screen is in a non-neutral color, and in many of the themes, you won’t find any pure black or white at all.</p>
+<p>As coders, we have collectively gotten used to the expectation that wherever we see code, it’s presented in a wide assortment of colors. So why would less color be better?</p>
+<p>Whenever you go to your local electronics store (or Costco), you’ll see that all of the TVs on display have their colors tuned to be extremely bright and vivid. This is great for grabbing your attention and making you think that the TV is high quality, but when you take the TV home, dim the lights, and watch a movie on it, those same settings that made it pop in the store will now strain your eyes and look unnatural.</p>
+<p>I think the same thing happens with color schemes. A large, well-curated color palette is nice to glance at, but I think these large palettes are actually bad for legibility. In order to read text that switches between so many colors, your brain has to work extra hard to compensate. Sure, the colors are communicating something about what kind of thing a word or symbol is, but with the ultra-fine granularity of color distinctions, I’m not sure that the average coder understands what all the colors are supposed to mean. If the information density of colors on the screen is too low, they aren’t worth the cognitive overhead of processing them.</p>
+<p>My approach to color is that a large proportion of the text on screen should be a “normal,” neutral color: black in light mode, white in dark mode. Any other use of color should communicate something important, and the meaning of the color should be instantly obvious.</p>
+<p>With this in mind, I’ve found that the most useful number of text colors to have is three:</p>
+<ol>
+<li>A bright, saturated accent color for comments</li>
+<li>A dimmed gray for language constants, keywords, operators, punctuation, and types</li>
+<li>White or black for everything else</li>
+</ol>
+<p>One great thing about this three color system is that it’s extremely flexible. Because only one of the three colors is non-neutral, the user can set the accent color to anything they like without altering the balance of the color scheme. For the purposes of this post, I’m simply using the link color as the accent color, but it really can be any color at all, as long as it looks sufficiently distinct from the other colors.</p>
+<p>So with all of this focus on the accent color, you may ask, why is it specially reserved only for <em>comments</em>? Comments aren’t real code! Don’t you want comments to fade into the background and get out of your way?</p>
+<p>Many themes de-emphasize comments to the point where they are barely visible. I think this is exactly the wrong approach. Comments are where you’re supposed to give useful context that can’t otherwise be encoded into the program itself. They answer questions such as “What are the limitations and caveats of an API?” and “Why is this line of code written in a complicated way when it looks like a simpler way would suffice?”</p>
+<p>If you use low contrast to obscure comments, you’re communicating that they’re unimportant, thus discouraging people from both reading and writing this crucial kind of documentation. Rather, by presenting comments as the most important snippets of your code through brightness and saturation, you draw people’s attention to them as important guides to pay attention to and wrestle with.</p>
+<p>As for the second category, the long list of scopes that <em>are</em> presented with low (but not unreadable) contrast, all of these fall into one of a few categories:</p>
+<ul>
+<li>Language constants and keywords usually look like normal words, but they are easy to misspell. Dimming them as they’re recognized gives the viewer an instant visual cue when they’re typed correctly.</li>
+<li>Operators and punctuation create a lot of visual noise, and dimming reduces the weight of that noise without making them harder to read.</li>
+<li>Types, including generics, type annotations, and type definitions, can be seen as supporting entities that help the compiler interpret (or validate, in the context of a dynamic language) the things they describe. Thus, they take on a secondary color.</li>
+</ul>
+<p>I experimented with giving strings and numeric literals a secondary accent color, and ultimately decided that this wasn’t necessary—it’s more important for me to keep the number of distinct colors low than use a distinct color to tell where a string starts and ends. I expect most people to disagree with me on this point, so to be clear, this is a purely matter of personal preference rather than principle.</p>
+<p>With such a low limit on the number of text colors, what happens to the distinctions that aren’t made by color?</p>
+<p>It turns out that programming languages, like natural languages, all contain rhythms and structures that help your brain parse large amounts of text at once without having to look directly at every word individually. Just like you don’t need every other word to be a different color in order to read this sentence, having fewer colors doesn’t make it difficult to read code, either.</p>
+<p>Plus, we have a plethora of tools in addition to color to help us evaluate context. Language servers make sense of references within a codebase. Linters flag when something doesn’t look right. <a href="https://packagecontrol.io/packages/BracketHighlighter">Bracket highlighters</a> help you find the boundaries of the context you’re in.</p>
+<p>Lastly, I want to talk about the issue of maximizing contrast. In <a href="https://practicaltypography.com/color.html#on-websites">Practical Typography</a>, one of the inspirations for this blog, Matthew Butterick states:</p>
+<blockquote>
+<p>Consider making your text dark gray rather than black. Unlike a piece of paper—which reflects ambient light—a computer screen projects its own light and tends to have more severe contrast. Therefore, on screen, dark-gray text can be more comfortable to read than black text. That’s why many digital-book readers let you reduce the screen brightness or change the text color.</p>
+</blockquote>
+<p>When it comes to productivity, I disagree with this point. I say, let the user decide. If it looks too harsh, they can just turn down their screen brightness. But on the occasion where they need every smidgen of contrast they can get, like when working outside on a sunny day, I don’t think it’s my place to tell someone they can’t take full advantage of their 1,000+ nit HDR display.</p>
+<p>In addition, this is an accessibility concern, as grayed out screens with low-contrast text are useless to blind and low-vision people. And coding at a computer frequently for long periods of time increases our chance of joining this group later in life, so even for those with perfect vision today, this concern may not be too far from your reality.</p>
+<p>That’s all I have to share about my approach to syntax highlighting—a minimal, monochrome high-contrast color scheme with a neutral body color and comments highlighted in a saturated accent color. If you’re interested in trying this kind of color scheme in your own text editor, check out my Nuclear Summer and Nuclear Winter <a href="https://gist.github.com/xsznix/4efc972ae5174fda5e626d7871152538">themes for Sublime Text</a>. I haven’t decided if I like these enough to submit them to Package Control, so to try these out you’ll have to manually download the files and place them in the <code>Packages/Themes/</code> folder of your Sublime Text preferences.</p></article>
+    <p class="date astro-GTFH3CCH">Published on <time class="astro-GTFH3CCH">2023-09-16</time></p>
+  </main><footer class="astro-GTFH3CCH">
+    <a href="https://www.simn.me" aria-label="My personal website" class="astro-5U24VWYT"><img src="/blog/avatar.png" width="256" height="256" alt="An AI-generated faux Chinese character on a green background" class="astro-5U24VWYT"></a>
+
+  </footer>
+  
+</body></html>

@@ -9,21 +9,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;700&family=Alegreya:ital,wght@0,400;0,700;1,400;1,500&family=Fira+Code&family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <title>Coding in Monochrome</title>
-  <link rel="stylesheet" href="/blog/assets/carpal-tunnel.63c972dc.css" />
+  <link rel="stylesheet" href="/blog/assets/carpal-tunnel.1e61f351.css" />
 <link rel="stylesheet" href="/blog/assets/syntax-highlighting.111e6606.css" /></head>
   <body>
-    <nav class="astro-GAGMBZX2">
-  <a href="/blog/" class="astro-GAGMBZX2">Home</a>
-  <span aria-hidden="true" class="astro-GAGMBZX2">|</span> Simon&rsquo;s Tidbits
+    <nav class="astro-NRZUCT2O">
+  <a href="/blog/" class="astro-NRZUCT2O">Home</a>
+  <span aria-hidden="true" class="astro-NRZUCT2O">|</span> Simon&rsquo;s Tidbits
 </nav>
-<main class="astro-GTFH3CCH">
-    <div class="root astro-IBCG3J65" role="presentation">
-  <h1 class="title astro-IBCG3J65">Coding in Monochrome</h1>
-  <p class="subtitle astro-IBCG3J65" role="doc-subtitle">A minimalist color philosophy for syntax highlighting</p>
+<main class="astro-V453TSYP">
+    <div class="root astro-KY7C4BVE" role="presentation">
+  <h1 class="title astro-KY7C4BVE">Coding in Monochrome</h1>
+  <p class="subtitle astro-KY7C4BVE" role="doc-subtitle">A minimalist color philosophy for syntax highlighting</p>
   
 </div>
 
-    <article class="astro-GTFH3CCH"><p>There are certain things that every nerd reinvents from scratch at some point in their life, and text editor color schemes are close to the top of that list.</p>
+    <article class="astro-V453TSYP"><p>There are certain things that every nerd reinvents from scratch at some point in their life, and text editor color schemes are close to the top of that list.</p>
 <p>My contribution to this discussion about deeply personal opinions aims to explore the purpose of color as a tool for communication, not aesthetics. If you want your code to look like a rainbow—which there’s nothing wrong with—you probably won’t like the approach I present below. But for those who simply want their code to be maximally legible, this might be for you.</p>
 <p>To start off, let’s take a look at the color scheme I came up with:</p>
 <pre class="media-width _root_6d49j_1"><span class="_accent_6d49j_18">/**<br/> * Returns the factorial of a non-negative integer. Throws if the<br/> * input is negative or not an integer.<br/> *<br/> * A factorial of a number N is the product of all positive integers<br/> * less than or equal to N. By definition, the factorial of 0 is 1.<br/> */</span><br/><span class="_dimmed_6d49j_14">export function</span> factorial<span class="_dimmed_6d49j_14">(</span>num<span class="_dimmed_6d49j_14">: number,</span> acc <span class="_dimmed_6d49j_14">= </span>1<span class="_dimmed_6d49j_14">) {</span><br/>	<span class="_dimmed_6d49j_14">if (</span>num <span class="_dimmed_6d49j_14">&lt;</span> 0<span class="_dimmed_6d49j_14"> || !</span>Number<span class="_dimmed_6d49j_14">.</span>isInteger<span class="_dimmed_6d49j_14">(</span>num<span class="_dimmed_6d49j_14">))</span><br/>		<span class="_dimmed_6d49j_14">throw new </span>RangeError<span class="_dimmed_6d49j_14">(</span><br/>			<span class="_dimmed_6d49j_14">&quot;</span>Can&#x27;t calculate factorial for non-integer or negative number<span class="_dimmed_6d49j_14">&quot;,</span><br/>		<span class="_dimmed_6d49j_14">);</span><br/><br/>	<span class="_dimmed_6d49j_14">if (</span>num <span class="_dimmed_6d49j_14">&lt;=</span> 1<span class="_dimmed_6d49j_14">)</span> <span class="_dimmed_6d49j_14">return</span> 1<span class="_dimmed_6d49j_14">;</span><br/><br/>	<span class="_accent_6d49j_18">// Passing the second param makes this a tail call</span><br/>	<span class="_dimmed_6d49j_14">return</span> factorial<span class="_dimmed_6d49j_14">(</span>num <span class="_dimmed_6d49j_14">-</span> 1<span class="_dimmed_6d49j_14">,</span> acc <span class="_dimmed_6d49j_14">*</span> num<span class="_dimmed_6d49j_14">);</span><br/><span class="_dimmed_6d49j_14">}</span></pre>
@@ -78,9 +78,9 @@
 <p>When it comes to productivity, I disagree with this point. I say, let the user decide. If it looks too harsh, they can just turn down their screen brightness. But on the occasion where they need every smidgen of contrast they can get, like when working outside on a sunny day, I don’t think it’s my place to tell someone they can’t take full advantage of their 1,000+ nit HDR display.</p>
 <p>In addition, this is an accessibility concern, as grayed out screens with low-contrast text are useless to blind and low-vision people. And coding at a computer frequently for long periods of time increases our chance of joining this group later in life, so even for those with perfect vision today, this concern may not be too far from your reality.</p>
 <p>That’s all I have to share about my approach to syntax highlighting—a minimal, monochrome high-contrast color scheme with a neutral body color and comments highlighted in a saturated accent color. If you’re interested in trying this kind of color scheme in your own text editor, check out my Nuclear Summer and Nuclear Winter <a href="https://gist.github.com/xsznix/4efc972ae5174fda5e626d7871152538">themes for Sublime Text</a>. I haven’t decided if I like these enough to submit them to Package Control, so to try these out you’ll have to manually download the files and place them in the <code>Packages/Themes/</code> folder of your Sublime Text preferences.</p></article>
-    <p class="date astro-GTFH3CCH">Published on <time class="astro-GTFH3CCH">2023-09-16</time></p>
-  </main><footer class="astro-GTFH3CCH">
-    <a href="https://www.simn.me" aria-label="My personal website" class="astro-5U24VWYT"><img src="/blog/avatar.png" width="256" height="256" alt="An AI-generated faux Chinese character on a green background" class="astro-5U24VWYT"></a>
+    <p class="date astro-V453TSYP">Published on <time class="astro-V453TSYP">2023-09-16</time></p>
+  </main><footer class="astro-V453TSYP">
+    <a href="https://www.simn.me" aria-label="My personal website" class="astro-FZBSMLYI"><img src="/blog/avatar.png" width="256" height="256" alt="An AI-generated faux Chinese character on a green background" class="astro-FZBSMLYI"></a>
 
   </footer>
   

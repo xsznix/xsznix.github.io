@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jubilee Calendar</title>
+<link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+<script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+<style>
+body {
+	margin: 0;
+}
+#gcal {
+	width: 100vw;
+	height: calc(100vh - 60px);
+}
+#add {
+	height: 60px;
+	margin-top: -6px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: #f0f4f8;
+}
+@media (max-width: 660px) {
+	#add {
+		height: unset;
+		flex-direction: column;
+	}
+}
+#add p {
+	margin-bottom: 3.5px;
+}
+#add a {
+	display: contents;
+}
+</style>
+</head>
+<body>
+<iframe id="gcal" src="https://calendar.google.com/calendar/embed?src=dd02ceb684e5cd16459dcb12777aadca65e906dae596d3cead31ba850c5a8917%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" frameborder="0" scrolling="no"></iframe>
+<aside id="add">
+	<p class="mui--text-subhead">Add to:&ensp;</p>
+	<a href="webcal://calendar.google.com/calendar/ical/dd02ceb684e5cd16459dcb12777aadca65e906dae596d3cead31ba850c5a8917%40group.calendar.google.com/public/basic.ics"><button class="mui-btn mui-btn--flat mui-btn--primary mui-btn--small">Apple Calendar or Outlook</button></a>
+	<a href="https://calendar.google.com/calendar/r?cid=webcal://calendar.google.com/calendar/ical/dd02ceb684e5cd16459dcb12777aadca65e906dae596d3cead31ba850c5a8917%40group.calendar.google.com/public/basic.ics"><button class="mui-btn mui-btn--flat mui-btn--primary mui-btn--small">Google Calendar</button></a>
+	<a href="https://outlook.office.com/calendar/0/addfromweb?url=webcal://calendar.google.com/calendar/ical/dd02ceb684e5cd16459dcb12777aadca65e906dae596d3cead31ba850c5a8917%40group.calendar.google.com/public/basic.ics"><button class="mui-btn mui-btn--flat mui-btn--primary mui-btn--small">Microsoft 365</button></a>
+</aside>
+</body>
+</html>
